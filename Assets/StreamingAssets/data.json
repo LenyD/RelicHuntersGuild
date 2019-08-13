@@ -1,0 +1,1149 @@
+{ 
+    "items": [
+        {
+            "id":0,
+            "name": "Minor Healing Potion",
+            "effect": "Heal 5 HP",
+            "applyEffectFunction": "potion5",
+            "cost":10,
+            "sprite":"heal_pot"
+            
+        },
+        {
+            "id":1,
+            "name": "Healing Potion",
+            "effect": "Heal 10 HP",
+            "applyEffectFunction": "potion10",
+            "cost":30,
+            "sprite":"heal_pot"
+            
+        },
+        {
+            "id":2,
+            "name": "Major Healing Potion",
+            "effect": "Heal 15 HP",
+            "applyEffectFunction": "potion15",
+            "cost":50,
+            "sprite":"heal_pot"
+            
+        },
+        {
+            "id":3,
+            "name": "Shiv",
+            "effect": "+1 DAMAGE",
+            "applyEffectFunction": "dagger1",
+            "cost":20,
+            "sprite":"dagger"
+        },
+        {
+            "id":4,
+            "name": "Knife",
+            "effect": "+2 DAMAGE",
+            "applyEffectFunction": "dagger2",
+            "cost":35,
+            "sprite":"dagger"
+        },
+        {
+            "id":5,
+            "name": "Dagger",
+            "effect": "+3 DAMAGE",
+            "applyEffectFunction": "dagger3",
+            "cost":60,
+            "sprite":"dagger"
+        },
+        {
+            "id":6,
+            "name": "Arrows",
+            "effect": "+1 ACCURACY",
+            "applyEffectFunction": "qualityArrows1",
+            "cost":20,
+            "sprite":"quality_arrow"
+        },
+        {
+            "id":7,
+            "name": "Quality Arrows",
+            "effect": "+2 ACCURACY",
+            "applyEffectFunction": "qualityArrows2",
+            "cost":35,
+            "sprite":"quality_arrow"
+        },
+        {
+            "id":8,
+            "name": "Razor Head Arrows",
+            "effect": "+3 ACCURACY",
+            "applyEffectFunction": "qualityArrows3",
+            "cost":60,
+            "sprite":"quality_arrow"
+        },
+        {
+            "id":9,
+            "name": "Poor Quality Boots",
+            "effect": "+1 EVASION",
+            "applyEffectFunction": "boots1",
+            "cost":20,
+            "sprite":"boots"
+        },
+        {
+            "id":10,
+            "name": "Boots",
+            "effect": "+2 EVASION",
+            "applyEffectFunction": "boots2",
+            "cost":35,
+            "sprite":"boots"
+        },
+        {
+            "id":11,
+            "name": "Leather Boots",
+            "effect": "+3 EVASION",
+            "applyEffectFunction": "boots3",
+            "cost":60,
+            "sprite":"boots"
+        },
+        {
+            "id":12,
+            "name": "Shield",
+            "effect": "+1 BLOCK",
+            "applyEffectFunction": "shield1",
+            "cost":20,
+            "sprite":"shield"
+        },
+        {
+            "id":13,
+            "name": "Metal Shield",
+            "effect": "+2 BLOCK",
+            "applyEffectFunction": "shield2",
+            "cost":35,
+            "sprite":"shield"
+        },
+        {
+            "id":14,
+            "name": "Tower Shield",
+            "effect": "+3 BLOCK",
+            "applyEffectFunction": "shield3",
+            "cost":60,
+            "sprite":"shield"
+        },
+        {
+            "id":15,
+            "name": "Bundle of Wood",
+            "effect": "+1 rest",
+            "applyEffectFunction": "firewood",
+            "cost":50,
+            "sprite":"firewood"
+        },
+        {
+            "id":16,
+            "name": "Big Bundle of Wood",
+            "effect": "+2 rest",
+            "applyEffectFunction": "firewood2",
+            "cost":50,
+            "sprite":"firewood"
+        },
+        {
+            "id":17,
+            "name": "Heavy Rusty Plate Armor",
+            "effect": "+3 BLOCK\n-1 EVASION",
+            "applyEffectFunction": "hvyPlateArmor1",
+            "cost":30,
+            "sprite":"hvy_plate"
+        },
+        {
+            "id":18,
+            "name": "Heavy Plate Armor",
+            "effect": "+5 BLOCK\n-2 EVASION",
+            "applyEffectFunction": "hvyPlateArmor2",
+            "cost":60,
+            "sprite":"hvy_plate"
+        },
+        {
+            "id":19,
+            "name": "Thick Rusty Plate Armor",
+            "effect": "+3 BLOCK\n-1 DAMAGE",
+            "applyEffectFunction": "thickPlateArmor1",
+            "cost":30,
+            "sprite":"plate"
+        },
+        {
+            "id":20,
+            "name": "Thick Plate Armor",
+            "effect": "+5 BLOCK\n-2 DAMAGE",
+            "applyEffectFunction": "thickPlateArmor2",
+            "cost":60,
+            "sprite":"plate"
+        },
+        {
+            "id":21,
+            "name": "Helm",
+            "effect": "+3 BLOCK\n-1 ACCURACY",
+            "applyEffectFunction": "helm1",
+            "cost":30,
+            "sprite":"helm"
+        },
+        {
+            "id":22,
+            "name": "Plate Helm",
+            "effect": "+5 BLOCK\n-2 ACCURACY",
+            "applyEffectFunction": "helm2",
+            "cost":60,
+            "sprite":"helm"
+        },
+        {
+            "id":23,
+            "name": "Leather Bracers",
+            "effect": "+3 EVASION\n-1 DAMAGE",
+            "applyEffectFunction": "leatherBracers1",
+            "cost":30,
+            "sprite":"leather_bracers"
+        },
+        {
+            "id":24,
+            "name": "Smooth Leather Bracers",
+            "effect": "+5 EVASION\n-2 DAMAGE",
+            "applyEffectFunction": "leatherBracers2",
+            "cost":60,
+            "sprite":"leather_bracers"
+        },
+        {
+            "id":25,
+            "name": "Eye patch",
+            "effect": "+3 EVASION\n-1 ACCURACY",
+            "applyEffectFunction": "eyePatch1",
+            "cost":30,
+            "sprite":"eye_patch"
+        },
+        {
+            "id":26,
+            "name": "Veterans Eye patch",
+            "effect": "+5 EVASION\n-2 ACCURACY",
+            "applyEffectFunction": "eyePatch2",
+            "cost":60,
+            "sprite":"eye_patch"
+        },
+        {
+            "id":27,
+            "name": "Cloak",
+            "effect": "+3 EVASION\n-1 BLOCK",
+            "applyEffectFunction": "evasionCloak1",
+            "cost":30,
+            "sprite":"evasion_cloak"
+        },
+        {
+            "id":28,
+            "name": "Evasion Cloak",
+            "effect": "+5 EVASION\n-2 BLOCK",
+            "applyEffectFunction": "evasionCloak2",
+            "cost":60,
+            "sprite":"evasion_cloak"
+        },
+        {
+            "id":29,
+            "name": "Blunt Greatsword",
+            "effect": "+3 DAMAGE\n-1 EVASION",
+            "applyEffectFunction": "greatsword1",
+            "cost":30,
+            "sprite":"greatsword"
+        },
+        {
+            "id":30,
+            "name": "Greatsword",
+            "effect": "+5 DAMAGE\n-2 EVASION",
+            "applyEffectFunction": "greatsword2",
+            "cost":60,
+            "sprite":"greatsword"
+        },
+        {
+            "id":31,
+            "name": "Flail",
+            "effect": "+3 DAMAGE\n-1 ACCURACY",
+            "applyEffectFunction": "flail1",
+            "cost":30,
+            "sprite":"flail"
+        },
+        {
+            "id":32,
+            "name": "Multi-headed Flail",
+            "effect": "+5 DAMAGE\n-2 ACCURACY",
+            "applyEffectFunction": "flail2",
+            "cost":60,
+            "sprite":"flail"
+        },
+        {
+            "id":33,
+            "name": "Halberd",
+            "effect": "+3 DAMAGE\n-1 BLOCK",
+            "applyEffectFunction": "halberd1",
+            "cost":30,
+            "sprite":"halberd"
+        },
+        {
+            "id":34,
+            "name": "Sharpened Halberd",
+            "effect": "+5 DAMAGE\n-2 BLOCK",
+            "applyEffectFunction": "halberd2",
+            "cost":60,
+            "sprite":"halberd"
+        },
+        {
+            "id":35,
+            "name": "Short Bow",
+            "effect": "+3 ACCURACY\n-1 DAMAGE",
+            "applyEffectFunction": "shortBow1",
+            "cost":30,
+            "sprite":"short_bow"
+        },
+        {
+            "id":36,
+            "name": "Handcrafted Short Bow",
+            "effect": "+5 ACCURACY\n-2 DAMAGE",
+            "applyEffectFunction": "shortBow2",
+            "cost":60,
+            "sprite":"short_bow"
+        },
+        {
+            "id":37,
+            "name": "Longbow",
+            "effect": "+3 ACCURACY\n-1 EVASION",
+            "applyEffectFunction": "longBow1",
+            "cost":30,
+            "sprite":"longbow"
+        },
+        {
+            "id":38,
+            "name": "Powerful Longbow",
+            "effect": "+5 ACCURACY\n-2 EVASION",
+            "applyEffectFunction": "longBow2",
+            "cost":60,
+            "sprite":"longbow"
+        },
+        {
+            "id":39,
+            "name": "Wooden Bow",
+            "effect": "+3 ACCURACY\n-1 BLOCK",
+            "applyEffectFunction": "woodenBow1",
+            "cost":30,
+            "sprite":"wooden_bow"
+        },
+        {
+            "id":40,
+            "name": "Polished Wooden Bow",
+            "effect": "+5 ACCURACY\n-2 BLOCK",
+            "applyEffectFunction": "woodenBow2",
+            "cost":60,
+            "sprite":"wooden_bow"
+        },
+        {
+            "id":41,
+            "name": "Leather Armor",
+            "effect": "+1 BLOCK\n+1 EVASION",
+            "applyEffectFunction": "lightLeatherArmor1",
+            "cost":30,
+            "sprite":"leather"
+        },
+        {
+            "id":42,
+            "name": "Heavy Leather Armor",
+            "effect": "+2 BLOCK\n+1 EVASION",
+            "applyEffectFunction": "lightLeatherArmor2",
+            "cost":60,
+            "sprite":"leather"
+        },
+        {
+            "id":43,
+            "name": "Light Leather Armor",
+            "effect": "+2 EVASION\n+1 BLOCK",
+            "applyEffectFunction": "lightLeatherArmor3",
+            "cost":60,
+            "sprite":"leather"
+        },
+        {
+            "id":44,
+            "name": "Studded Leather Armor",
+            "effect": "+1 BLOCK\n+1 DAMAGE",
+            "applyEffectFunction": "studdedLeatherArmor1",
+            "cost":30,
+            "sprite":"studded_leather"
+        },
+        {
+            "id":45,
+            "name": "Studded Hard Leather Armor",
+            "effect": "+2 BLOCK\n+1 DAMAGE",
+            "applyEffectFunction": "studdedLeatherArmor2",
+            "cost":60,
+            "sprite":"studded_leather"
+        },
+        {
+            "id":46,
+            "name": "Heavily Studded Leather Armor",
+            "effect": "+2 DAMAGE\n+1 BLOCK",
+            "applyEffectFunction": "studdedLeatherArmor3",
+            "cost":60,
+            "sprite":"studded_leather"
+        },
+        {
+            "id":47,
+            "name": "Leather Gloves",
+            "effect": "+1 BLOCK\n+1 ACCURACY",
+            "applyEffectFunction": "leatherGloves1",
+            "cost":30,
+            "sprite":"leather_gloves"
+        },
+        {
+            "id":48,
+            "name": "Hard Leather Gloves",
+            "effect": "+2 BLOCK\n+1 ACCURACY",
+            "applyEffectFunction": "leatherGloves2",
+            "cost":60,
+            "sprite":"leather_gloves"
+        },
+        {
+            "id":49,
+            "name": "Smooth Leather Gloves",
+            "effect": "+2 ACCURACY\n+1 BLOCK",
+            "applyEffectFunction": "leatherGloves3",
+            "cost":60,
+            "sprite":"leather_gloves"
+        },
+        {
+            "id":50,
+            "name": "Studded pants",
+            "effect": "+1 EVASION\n+1 DAMAGE",
+            "applyEffectFunction": "studdedPants1",
+            "cost":30,
+            "sprite":"studded_pants"
+        },
+        {
+            "id":51,
+            "name": "Smooth Studded pants",
+            "effect": "+2 EVASION\n+1 DAMAGE",
+            "applyEffectFunction": "studdedPants2",
+            "cost":60,
+            "sprite":"studded_pants"
+        },
+        {
+            "id":52,
+            "name": "Heavily Studded pants",
+            "effect": "+2 DAMAGE\n+1 EVASION",
+            "applyEffectFunction": "studdedPants3",
+            "cost":60,
+            "sprite":"studded_pants"
+        },
+        {
+            "id":53,
+            "name": "Broken Glasses",
+            "effect": "+1 EVASION\n+1 ACCURACY",
+            "applyEffectFunction": "Glasses1",
+            "cost":30,
+            "sprite":"glasses"
+        },
+        {
+            "id":54,
+            "name": "Glasses",
+            "effect": "+2 EVASION\n+1 ACCURACY",
+            "applyEffectFunction": "Glasses2",
+            "cost":60,
+            "sprite":"glasses"
+        },
+        {
+            "id":55,
+            "name": "Spectacles",
+            "effect": "+2 ACCURACY\n+1 EVASION",
+            "applyEffectFunction": "Glasses3",
+            "cost":60,
+            "sprite":"glasses"
+        },
+        {
+            "id":56,
+            "name": "Crossbow",
+            "effect": "+1 DAMAGE\n+1 ACCURACY",
+            "applyEffectFunction": "crossbow1",
+            "cost":30,
+            "sprite":"crossbow"
+        },
+        {
+            "id":57,
+            "name": "Heavy Crossbow",
+            "effect": "+2 DAMAGE\n+1 ACCURACY",
+            "applyEffectFunction": "hvyCrossbow",
+            "cost":60,
+            "sprite":"crossbow"
+        },
+        {
+            "id":58,
+            "name": "Marksman's Crossbow",
+            "effect": "+2 ACCURACY\n+1 DAMAGE",
+            "applyEffectFunction": "crossbow2",
+            "cost":60,
+            "sprite":"crossbow"
+        },
+        {
+            "id":59,
+            "name": "Strength Potion",
+            "effect": "+4 DAMAGE (Temporary)",
+            "applyEffectFunction": "strengthPotion",
+            "cost":20,
+            "sprite":"dmg_pot"
+        },
+        {
+            "id":60,
+            "name": "Potent Strength Potion",
+            "effect": "+8 DAMAGE (Temporary)",
+            "applyEffectFunction": "potentStrengthPotion",
+            "cost":35,
+            "sprite":"dmg_pot"
+        },
+        {
+            "id":61,
+            "name": "Reflexe Potion",
+            "effect": "+4 EVASION (Temporary)",
+            "applyEffectFunction": "reflexePotion",
+            "cost":20,
+            "sprite":"spd_pot"
+        },
+        {
+            "id":62,
+            "name": "Potent Reflexe Potion",
+            "effect": "+8 EVASION (Temporary)",
+            "applyEffectFunction": "potentReflexePotion",
+            "cost":35,
+            "sprite":"spd_pot"
+        },
+        {
+            "id":63,
+            "name": "Night Vision Potion",
+            "effect": "+4 ACCURACY (Temporary)",
+            "applyEffectFunction": "nightVisionPotion",
+            "cost":20,
+            "sprite":"acc_pot"
+        },
+        {
+            "id":64,
+            "name": "Potent Night Vision Potion",
+            "effect": "+8 ACCURACY (Temporary)",
+            "applyEffectFunction": "potentNightVisionPotion",
+            "cost":35,
+            "sprite":"acc_pot"
+        },
+        {
+            "id":65,
+            "name": "Iron Skin Potion",
+            "effect": "+4 BLOCK (Temporary)",
+            "applyEffectFunction": "ironSkinPotion",
+            "cost":20,
+            "sprite":"def_pot"
+        },
+        {
+            "id":66,
+            "name": "Potent Iron Skin Potion",
+            "effect": "+8 BLOCK (Temporary)",
+            "applyEffectFunction": "potentIronSkinPotion",
+            "cost":35,
+            "sprite":"def_pot"
+        },
+        {
+            "id":67,
+            "name": "Snack",
+            "effect": "+3 HP",
+            "applyEffectFunction": "food1",
+            "cost":25,
+            "sprite":"food"
+        },
+        {
+            "id":68,
+            "name": "Meal",
+            "effect": "+7 HP",
+            "applyEffectFunction": "food2",
+            "cost":25,
+            "sprite":"food"
+        },
+        {
+            "id":69,
+            "name": "Hearty Buffet",
+            "effect": "+11 HP",
+            "applyEffectFunction": "food3",
+            "cost":25,
+            "sprite":"food"
+        },
+        {
+            "id":70,
+            "name": "Gold Pouch",
+            "effect": "+25 gold",
+            "applyEffectFunction": "money1",
+            "cost":27,
+            "sprite":"bag_gold"
+        },
+        {
+            "id":71,
+            "name": "Gold Bag",
+            "effect": "+40 gold",
+            "applyEffectFunction": "money2",
+            "cost":44,
+            "sprite":"bag_gold"
+        },
+        {
+            "id":72,
+            "name": "Huge Gold Bag",
+            "effect": "+60 gold",
+            "applyEffectFunction": "money3",
+            "cost":66,
+            "sprite":"bag_gold"
+        },
+        {
+            "id":73,
+            "name": "Energy Drink",
+            "effect": "+5 max energy",
+            "applyEffectFunction": "energyDrink1",
+            "cost":20,
+            "sprite":"energy_drink"
+        },
+        {
+            "id":74,
+            "name": "Potent Energy Drink",
+            "effect": "+10 max energy",
+            "applyEffectFunction": "energyDrink2",
+            "cost":35,
+            "sprite":"energy_drink"
+        },
+        {
+            "id":75,
+            "name": "Strong Energy Drink",
+            "effect": "+15 max energy",
+            "applyEffectFunction": "energyDrink3",
+            "cost":60,
+            "sprite":"energy_drink"
+        },
+        {
+            "id":76,
+            "name": "Bomb Pouch",
+            "effect": "+1 bomb",
+            "applyEffectFunction": "bomb1",
+            "cost":20,
+            "sprite":"bag_bombs"
+        },
+        {
+            "id":77,
+            "name": "Bomb Bag",
+            "effect": "+3 bombs",
+            "applyEffectFunction": "bomb3",
+            "cost":35,
+            "sprite":"bag_bombs"
+        },
+        {
+            "id":78,
+            "name": "Huge Bomb Bag",
+            "effect": "+5 bombs",
+            "applyEffectFunction": "bomb5",
+            "cost":60,
+            "sprite":"bag_bombs"
+        },
+        {
+            "id":79,
+            "name": "Artifact",
+            "effect": "+1 artifact",
+            "applyEffectFunction": "artifact",
+            "cost":75,
+            "sprite":"artifact"
+        },
+        {
+            "id":80,
+            "name": "Holy Water",
+            "effect": "Remove curses",
+            "applyEffectFunction": "holyWater",
+            "cost":30,
+            "sprite":"holy_water"
+        }
+    ],
+    "relics": [
+        {
+            "id":0,
+            "name": "Excalibur",
+            "effect": "+7 DAMAGE",
+            "applyEffectFunction": "excalibur",
+            "cost":3,
+            "sprite":"excalibur"
+        },
+        {
+            "id":1,
+            "name": "Talaria",
+            "effect": "+7 EVASION",
+            "applyEffectFunction": "talaria",
+            "cost":3,
+            "sprite":"talaria"
+        },
+        {
+            "id":2,
+            "name": "Aegis",
+            "effect": "+7 BLOCK",
+            "applyEffectFunction": "aegis",
+            "cost":3,
+            "sprite":"aegis"
+        },
+        {
+            "id":3,
+            "name": "Artemis' Bow",
+            "effect": "+7 ACCURACY",
+            "applyEffectFunction": "artemisBow",
+            "cost":3,
+            "sprite":"artemis_bow"
+        },
+        {
+            "id":4,
+            "name": "Gjallarhorn",
+            "effect": "25% chance to for nodes to be filled at the start of combat.",
+            "applyEffectFunction": "gjallarhorn",
+            "cost":5,
+            "sprite":"gjallarhorn"
+        },
+        {
+            "id":5,
+            "name": "Ankh",
+            "effect": "Second Life",
+            "applyEffectFunction": "ankh",
+            "cost":7,
+            "sprite":"ankh"
+        },
+        {
+            "id":6,
+            "name": "Medusa's Head",
+            "effect": "Stun ennemies at the start of combat",
+            "applyEffectFunction": "medusaHead",
+            "cost":5,
+            "sprite":"medusa_head"
+        },
+        {
+            "id":7,
+            "name": "Gleipnir",
+            "effect": "Stun ennemy node for longer after attacking",
+            "applyEffectFunction": "gleipnir",
+            "cost":5,
+            "sprite":"gleipnir"
+        },
+        {
+            "id":8,
+            "name": "Book of Thoth",
+            "effect": "Slows down the difficulty timer",
+            "applyEffectFunction": "bookThoth",
+            "cost":7,
+            "sprite":"book_thoth"
+        },
+        {
+            "id":9,
+            "name": "Anemoi's Wind",
+            "effect": "Increase Discovery range",
+            "applyEffectFunction": "anemoiWind",
+            "cost":2,
+            "sprite":"anemoi_wind"
+        }  
+    ],
+    "lootTables":[
+        {
+            "table" :[0,3,6,9,12,15,17,19,21,23,25,27,29,31,33,35,37,39,41,44,47,50,53,56,67,73,76,79,80]
+        },
+        {
+            "table" :[0,3,6,9,12,15,17,19,21,23,25,27,29,31,33,35,37,39,41,44,47,50,53,56,59,61,63,65,67,70,73,76,79,80]
+        },
+        {
+            "table" :[0,3,6,9,12,15,17,19,21,23,25,27,29,31,33,35,37,39,41,44,47,50,53,56,59,61,63,65,67,70,73,76,79,80,1,4,7,10,13,18,20,22,24,26,28,30,32,34,36,38,40,60,62,64,66,68,71,74,77]
+        },
+        {
+            "table" :[1,4,7,10,13,15,16,18,20,22,24,26,28,30,32,34,36,38,40,41,44,47,50,53,56,60,62,64,66,68,71,74,77,79,80]
+        },
+        {
+            "table" :[1,4,7,10,13,15,16,18,20,22,24,26,28,30,32,34,36,38,40,41,44,47,50,53,56,60,62,64,66,68,71,74,77,79,80,2,5,8,11,14,42,43,45,46,48,49,51,52,53,54,55,56,57,58]
+        },
+        {
+            "table" :[2,5,8,11,14,18,20,22,24,26,28,30,32,34,36,38,40,42,43,45,46,48,49,51,52,53,54,55,56,57,58,60,62,64,66,68,71,74,77,79,80]
+        }
+    ],
+    "explorers":[
+        {
+            "name":"Mercenary",
+            "health"    :4,
+            "block"     :3,
+            "evade"     :0,
+            "strength"  :3,
+            "accuracy"  :0,
+            "effect"    :"",
+            "applyEffectFunction":"addMercenary",
+            "removeEffectFunction":"removeMercenary"
+        },
+        {
+            "name":"Arbalest",
+            "health"    :3,
+            "block"     :0,
+            "evade"     :2,
+            "strength"  :0,
+            "accuracy"  :4,
+            "effect"    :"",
+            "applyEffectFunction":"addArbalest",
+            "removeEffectFunction":"removeArbalest"
+        },
+        {
+            "name":"Cartographer",
+            "health"    :3,
+            "block"     :0,
+            "evade"     :2,
+            "strength"  :1,
+            "accuracy"  :0,
+            "effect"    :"Farther discovery range",
+            "applyEffectFunction":"addCartographer",
+            "removeEffectFunction":"removeCartographer"
+        },
+       
+        {
+            "name":"Cleric",
+            "health"    :1,
+            "block"     :0,
+            "evade"     :0,
+            "strength"  :2,
+            "accuracy"  :0,
+            "effect"    :"Heal periodically",
+            "applyEffectFunction":"addCleric",
+            "removeEffectFunction":"removeCleric"
+        },
+        {
+            "name":"Oracle",
+            "health"    :4,
+            "block"     :1,
+            "evade"     :2,
+            "strength"  :1,
+            "accuracy"  :0,
+            "effect"    :"Predict when something might happen",
+            "applyEffectFunction":"addOracle",
+            "removeEffectFunction":"removeOracle"
+        },
+        {
+            "name":"Spearman",
+            "health"    :3,
+            "block"     :3,
+            "evade"     :1,
+            "strength"  :2,
+            "accuracy"  :1,
+            "effect"    :"Damage can't be blocked",
+            "applyEffectFunction":"addSpearman",
+            "removeEffectFunction":"removeSpearman"
+        },
+        {
+            "name":"Thief",
+            "health"    :2,
+            "block"     :0,
+            "evade"     :3,
+            "strength"  :1,
+            "accuracy"  :2,
+            "effect"    :"Might steal item from the shop",
+            "applyEffectFunction":"addThief",
+            "removeEffectFunction":"removeThief"
+        },
+        {
+            "name":"Cook",
+            "health"    :4,
+            "block"     :0,
+            "evade"     :1,
+            "strength"  :2,
+            "accuracy"  :1,
+            "effect"    :"Regen stamina after battle",
+            "applyEffectFunction":"addCook",
+            "removeEffectFunction":"removeCook"
+        },
+        {
+            "name":"Squire",
+            "health"    :2,
+            "block"     :0,
+            "evade"     :1,
+            "strength"  :1,
+            "accuracy"  :0,
+            "effect"    :"Find better items",
+            "applyEffectFunction":"addSquire",
+            "removeEffectFunction":"removeSquire"
+        },
+        {
+            "name":"Tracker",
+            "health"    :3,
+            "block"     :1,
+            "evade"     :2,
+            "strength"  :2,
+            "accuracy"  :2,
+            "effect"    :"Can see monsters",
+            "applyEffectFunction":"addTracker",
+            "removeEffectFunction":"removeTracker"
+        },
+        {
+            "name":"Trapper",
+            "health"    :1,
+            "block"     :1,
+            "evade"     :3,
+            "strength"  :2,
+            "accuracy"  :2,
+            "effect"    :"Can see traps",
+            "applyEffectFunction":"addTrapper",
+            "removeEffectFunction":"removeTrapper"
+        },
+        {
+            "name":"Exorcist",
+            "health"    :3,
+            "block"     :1,
+            "evade"     :1,
+            "strength"  :1,
+            "accuracy"  :1,
+            "effect"    :"Can see cursed room and reduce their effectiveness",
+            "applyEffectFunction":"addExorcist",
+            "removeEffectFunction":"removeExorcist"
+        },
+        {
+            "name":"Monk",
+            "health"    :3,
+            "block"     :2,
+            "evade"     :2,
+            "strength"  :1,
+            "accuracy"  :0,
+            "effect"    :"Increase resting effectiveness",
+            "applyEffectFunction":"addMonk",
+            "removeEffectFunction":"removeMonk"
+        },
+        
+        {
+            "name":"Scholar",
+            "health"    :2,
+            "block"     :1,
+            "evade"     :1,
+            "strength"  :0,
+            "accuracy"  :2,
+            "effect"    :"Increase effectiveness of training rooms",
+            "applyEffectFunction":"addScholar",
+            "removeEffectFunction":"removeScholar"
+        },
+        {
+            "name":"Nobleman",
+            "health"    :3,
+            "block"     :0,
+            "evade"     :1,
+            "strength"  :0,
+            "accuracy"  :1,
+            "effect"    :"Start with more gold and generate income",
+            "applyEffectFunction":"addNobleman",
+            "removeEffectFunction":"removeNobleman"
+        },
+        {
+            "name":"Jester",
+            "health"    :1,
+            "block"     :1,
+            "evade"     :4,
+            "strength"  :1,
+            "accuracy"  :1,
+            "effect"    :"Increase effectiveness of timed attack",
+            "applyEffectFunction":"addJester",
+            "removeEffectFunction":"removeJester"
+        },
+        {
+            "name":"Bard",
+            "health"    :3,
+            "block"     :1,
+            "evade"     :1,
+            "strength"  :0,
+            "accuracy"  :0,
+            "effect"    :"Slows down the metronome",
+            "applyEffectFunction":"addBard",
+            "removeEffectFunction":"removeBard"
+        },
+        {
+            "name":"Cultist",
+            "health"    :3,
+            "block"     :0,
+            "evade"     :2,
+            "strength"  :2,
+            "accuracy"  :1,
+            "effect"    :"Reverse blessings and curse effects",
+            "applyEffectFunction":"addCultist",
+            "removeEffectFunction":"removeCultist"
+        },
+        {
+            "name":"Demolitionist",
+            "health"    :2,
+            "block"     :0,
+            "evade"     :0,
+            "strength"  :3,
+            "accuracy"  :1,
+            "effect"    :"Starts with more bomb and create some while resting",
+            "applyEffectFunction":"addDemolitionist",
+            "removeEffectFunction":"removeDemolitionist"
+        }
+        
+    ],
+    "EnemiesTables":[
+        {
+            "table":
+            [
+                {
+                    "health"    :5,
+                    "block"     :5,
+                    "evade"     :2,
+                    "strength"  :5,
+                    "accuracy"  :2,
+                    "image"     :"enemy0"
+                },
+                {
+                    "health"    :5,
+                    "block"     :2,
+                    "evade"     :5,
+                    "strength"  :2,
+                    "accuracy"  :5,
+                    "image"     :"enemy0"
+                },
+                {
+                    "health"    :9,
+                    "block"     :3,
+                    "evade"     :3,
+                    "strength"  :3,
+                    "accuracy"  :3,
+                    "image"     :"enemy0"
+                }
+            ]
+        },
+        {
+            "table":
+            [
+                {
+                    "health"    :8,
+                    "block"     :6,
+                    "evade"     :4,
+                    "strength"  :5,
+                    "accuracy"  :4,
+                    "image"     :"enemy1"
+                },
+                {
+                    "health"    :8,
+                    "block"     :5,
+                    "evade"     :4,
+                    "strength"  :6,
+                    "accuracy"  :4,
+                    "image"     :"enemy1"
+                },
+                {
+                    "health"    :10,
+                    "block"     :5,
+                    "evade"     :5,
+                    "strength"  :5,
+                    "accuracy"  :5,
+                    "image"     :"enemy1"
+                }
+            ]
+        },
+        {
+            "table":
+            [
+                {
+                    "health"    :10,
+                    "block"     :5,
+                    "evade"     :10,
+                    "strength"  :7,
+                    "accuracy"  :5,
+                    "image"     :"enemy0"
+                },
+                {
+                    "health"    :10,
+                    "block"     :7,
+                    "evade"     :5,
+                    "strength"  :10,
+                    "accuracy"  :5,
+                    "image"     :"enemy1"
+                },
+                {
+                    "health"    :15,
+                    "block"     :6,
+                    "evade"     :6,
+                    "strength"  :6,
+                    "accuracy"  :6,
+                    "image"     :"enemy2"
+                }
+            ]
+        },
+        {
+            "table":
+            [
+                {
+                    "health"    :10,
+                    "block"     :13,
+                    "evade"     :8,
+                    "strength"  :9,
+                    "accuracy"  :6,
+                    "image"     :"enemy0"
+                },
+                {
+                    "health"    :10,
+                    "block"     :9,
+                    "evade"     :6,
+                    "strength"  :13,
+                    "accuracy"  :8,
+                    "image"     :"enemy1"
+                },
+                {
+                    "health"    :15,
+                    "block"     :8,
+                    "evade"     :8,
+                    "strength"  :8,
+                    "accuracy"  :8,
+                    "image"     :"enemy2"
+                }
+            ]
+        },
+        {
+            "table":
+            [
+                {
+                    "health"    :10,
+                    "block"     :16,
+                    "evade"     :10,
+                    "strength"  :10,
+                    "accuracy"  :12,
+                    "image"     :"enemy0"
+                },
+                {
+                    "health"    :10,
+                    "block"     :10,
+                    "evade"     :12,
+                    "strength"  :16,
+                    "accuracy"  :10,
+                    "image"     :"enemy1"
+                },
+                {
+                    "health"    :15,
+                    "block"     :10,
+                    "evade"     :10,
+                    "strength"  :10,
+                    "accuracy"  :10,
+                    "image"     :"enemy2"
+                }
+            ]
+        },
+        {
+            "table":
+            [
+                {
+                    "health"    :15,
+                    "block"     :17,
+                    "evade"     :17,
+                    "strength"  :25,
+                    "accuracy"  :13,
+                    "image"     :"enemy0"
+                },
+                {
+                    "health"    :15,
+                    "block"     :17,
+                    "evade"     :25,
+                    "strength"  :13,
+                    "accuracy"  :17,
+                    "image"     :"enemy1"
+                },
+                {
+                    "health"    :25,
+                    "block"     :17,
+                    "evade"     :17,
+                    "strength"  :17,
+                    "accuracy"  :17,
+                    "image"     :"enemy2"
+                }
+            ]
+        }
+    ]
+    
+
+}

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1411299600308570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4210698914825576}
+  - component: {fileID: 114348682064314944}
+  m_Layer: 9
+  m_Name: Tile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4210698914825576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411299600308570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114348682064314944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411299600308570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1067b8f24394fdb479837bfe5efaab76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strName: 
+  _r: {fileID: 0}
+  disolveTextures:
+  - {fileID: 2800000, guid: f2f68687421209e4a968262d9b01232f, type: 3}
+  - {fileID: 2800000, guid: d119ad5c7b4c0df4aae7a3f80bda8693, type: 3}
+  - {fileID: 2800000, guid: f5ac7cf2e01dbb547a218fdf63b65bba, type: 3}
+  - {fileID: 2800000, guid: 7f6c2659e1edd6641bef18343e7d5a92, type: 3}
+  - {fileID: 2800000, guid: a64b3b2a58f3498499bb6d9b7297e90c, type: 3}
+  - {fileID: 2800000, guid: 7d53ff2ecd280f746b8816e24ce9d568, type: 3}
+  - {fileID: 2800000, guid: 9a394df6cbb0adb41b2e14d8180592c1, type: 3}
+  - {fileID: 2800000, guid: c41a1bdf482885e4aad6ce2f99a181ed, type: 3}
+  - {fileID: 2800000, guid: 0445e73f422a8ce449a8ec79fdfcd0f3, type: 3}
+  - {fileID: 2800000, guid: 19329895a012e884ca548bcc24b24d6d, type: 3}
+  _GM: {fileID: 0}
+  burnColor: {r: 0.78431374, g: 0, b: 0.18431373, a: 1}
+  directory: tiles/
+  torch: {fileID: 0}
+  torchSpawnTransform: {fileID: 0}
+  targetAlpha: 1
+  openChestSprite: {fileID: 21300000, guid: 2ac48dadb49c64641b70b01a4c8bf7eb, type: 3}
+  emptyAlchTable: {fileID: 0}

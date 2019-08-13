@@ -1,0 +1,227 @@
+{
+    "items": [
+        {
+            "name": "Minor Healing Potion",
+            "effect": "Heal 5 HP",
+            "applyEffectFunction": "potion5",
+            "cost":10,
+            "sprite":"heal_pot"
+        },
+        {
+            "name": "Dagger",
+            "effect": "+1 DMG",
+            "applyEffectFunction": "dagger",
+            "cost":20,
+            "sprite":"dagger"
+        },
+        {
+            "name": "Bomb",
+            "effect": "+1 Bomb",
+            "applyEffectFunction": "bomb1",
+            "cost":20,
+            "sprite":"bomb"
+        },
+        {
+            "name": "Firewood",
+            "effect": "+1 rest",
+            "applyEffectFunction": "firewood",
+            "cost":50,
+            "sprite":"firewood"
+        },
+        {
+            "name": "Plate Armor",
+            "effect": "+3 DEF\n-1 SPD",
+            "applyEffectFunction": "plateArmor",
+            "cost":30,
+            "sprite":"plate"
+        },
+        {
+            "name": "Leather Armor",
+            "effect": "+1 DEF\n+1 SPD",
+            "applyEffectFunction": "leatherArmor",
+            "cost":30,
+            "sprite":"leather"
+        },
+        {
+            "name": "Quality Arrows",
+            "effect": "+2 ACC",
+            "applyEffectFunction": "qualityArrows",
+            "cost":30,
+            "sprite":"quality_arrow"
+        },
+        {
+            "name": "Excalibur",
+            "effect": "+5 DMG\n-3 SPD",
+            "applyEffectFunction": "excalibur",
+            "cost":75,
+            "sprite":"excalibur"
+        },
+        {
+            "name": "Shield",
+            "effect": "+2 DEF",
+            "applyEffectFunction": "shield",
+            "cost":30,
+            "sprite":"shield"
+        },
+        {
+            "name": "Holy Water",
+            "effect": "Remove curses",
+            "applyEffectFunction": "holyWater",
+            "cost":30,
+            "sprite":"holy_water"
+        },
+        {
+            "name": "Boots",
+            "effect": "+2 SPD",
+            "applyEffectFunction": "boots",
+            "cost":20,
+            "sprite":"boots"
+        },
+        {
+            "name": "Helm",
+            "effect": "+2 DEF\n-1 ACC",
+            "applyEffectFunction": "helm",
+            "cost":30,
+            "sprite":"helm"
+        },
+        {
+            "name": "Food",
+            "effect": "+3 HP",
+            "applyEffectFunction": "food",
+            "cost":25,
+            "sprite":"food"
+        },
+        {
+            "name": "Flail",
+            "effect": "+3 DMG\n-2 ACC",
+            "applyEffectFunction": "flail",
+            "cost":25,
+            "sprite":"flail"
+        },
+        {
+            "name": "Strength Potion",
+            "effect": "+4 DMG (Temporary)",
+            "applyEffectFunction": "strengthPotion",
+            "cost":30,
+            "sprite":"dmg_pot"
+        },
+        {
+            "name": "Reflexe Potion",
+            "effect": "+4 SPD (Temporary)",
+            "applyEffectFunction": "reflexePotion",
+            "cost":25,
+            "sprite":"spd_pot"
+        },
+        {
+            "name": "Artifact",
+            "effect": "+1 artifact",
+            "applyEffectFunction": "artifact",
+            "cost":75,
+            "sprite":"artifact"
+        },
+        {
+            "name": "Ankh",
+            "effect": "+1 revive\n-1 soul",
+             "applyEffectFunction": "ankh",
+            "cost":100,
+            "sprite":"ankh"
+        }
+    ],
+    "lootTables":[
+        {
+            "table" : [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+        }
+    ],
+    "explorers":[
+        {
+            "name":"Mercenary",
+            "health"    :4,
+            "block"     :3,
+            "evade"     :0,
+            "strength"  :3,
+            "accuracy"  :0,
+            "effect"    :"",
+            "applyEffectFunction":"",
+            "removeEffectFuncion":""
+        },
+        {
+            "name":"Cartographer",
+            "health"    :3,
+            "block"     :0,
+            "evade"     :2,
+            "strength"  :1,
+            "accuracy"  :0,
+            "effect"    :"Farther discovery range",
+            "applyEffectFunction":"addCartographer",
+            "removeEffectFuncion":"removeCartographer"
+        },
+        {
+            "name":"Trapper",
+            "health"    :1,
+            "block"     :1,
+            "evade"     :3,
+            "strength"  :2,
+            "accuracy"  :2,
+            "effect"    :"Can see traps",
+            "applyEffectFunction":"addTrapper",
+            "removeEffectFuncion":"removeTrapper"
+        },
+        {
+            "name":"Priest",
+            "health"    :1,
+            "block"     :0,
+            "evade"     :0,
+            "strength"  :2,
+            "accuracy"  :0,
+            "effect"    :"Heal periodically",
+            "applyEffectFunction":"addPriest",
+            "removeEffectFuncion":"removePriest"
+        },
+        {
+            "name":"Tracker",
+            "health"    :3,
+            "block"     :1,
+            "evade"     :2,
+            "strength"  :2,
+            "accuracy"  :2,
+            "effect"    :"Can see monsters",
+            "applyEffectFunction":"addTracker",
+            "removeEffectFuncion":"removeTracker"
+        },
+        {
+            "name":"Exorcist",
+            "health"    :3,
+            "block"     :1,
+            "evade"     :1,
+            "strength"  :1,
+            "accuracy"  :1,
+            "effect"    :"Can see cursed room and reduce their effectiveness",
+            "applyEffectFunction":"addExorcist",
+            "removeEffectFuncion":"removeExorcist"
+        },
+        {
+            "name":"Arbalest",
+            "health"    :3,
+            "block"     :0,
+            "evade"     :2,
+            "strength"  :0,
+            "accuracy"  :4,
+            "effect"    :"",
+            "applyEffectFunction":"",
+            "removeEffectFuncion":""
+        },
+        {
+            "name":"Oracle",
+            "health"    :4,
+            "block"     :1,
+            "evade"     :2,
+            "strength"  :1,
+            "accuracy"  :0,
+            "effect"    :"Predict when something might happen",
+            "applyEffectFunction":"addOracle",
+            "removeEffectFuncion":"removeOracle"
+        }
+        
+    ]
+
+}
