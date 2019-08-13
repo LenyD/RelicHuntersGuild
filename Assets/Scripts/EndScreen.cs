@@ -7,6 +7,7 @@ public class EndScreen : MonoBehaviour
 {
     public GameObject gameOver;
     public GameObject congratulation;
+    public SoundEffect SE_click;
 
     // Start is called before the first frame update
 
@@ -24,11 +25,11 @@ public class EndScreen : MonoBehaviour
         Application.Quit();
     }
     public void option(){
-        //SEClick.playSound();
+        SE_click.playSound();
         SceneManager.LoadScene("OptionMenu", LoadSceneMode.Additive);
     }
     public void achievements(){
-        //SEClick.playSound();
+        SE_click.playSound();
         SceneManager.LoadScene("AchievementsMenu", LoadSceneMode.Additive);
     }
     public void toMainMenu(){

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class CreditsMenuController : MonoBehaviour
 {
     Achievements achievementsData;
-    public SoundEffect SEClick;
+    public SoundEffect SE_click;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class CreditsMenuController : MonoBehaviour
         StartCoroutine("closeMenu");
     }
     IEnumerator closeMenu(){
-        SEClick.playSound();
+        SE_click.playSound();
         yield return new WaitForSeconds(0.1f);
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("CreditsMenu"));
     }

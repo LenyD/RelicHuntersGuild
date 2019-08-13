@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ca2a0872983dc40a94c3ac7a88ab9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SEClick: {fileID: 924358508}
+  SE_click: {fileID: 924358508}
 --- !u!114 &924358508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,10 +1740,10 @@ AudioSource:
   m_GameObject: {fileID: 924358502}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 74b8e461f27d9fb49b0a2baa515a98d2,
+  OutputAudioMixerGroup: {fileID: -109614439373322456, guid: 74b8e461f27d9fb49b0a2baa515a98d2,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

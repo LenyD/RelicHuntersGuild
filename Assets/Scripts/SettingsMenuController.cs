@@ -10,21 +10,40 @@ public class SettingsMenuController : MonoBehaviour
     Resolution[] resolutions;
     public AudioMixer _mixer;
     public TMP_Dropdown _resolutionDropdown;
-    public Slider _volumeSlider;
+    public Slider _masterVolumeSlider;
+    public Slider _musicVolumeSlider;
+    public Slider _soundEffectVolumeSlider;
     public Toggle _fullscreenToggle;
-    public SoundEffect SEClick;
+    public SoundEffect SE_click;
     // Start is called before the first frame update
     void Start()
     {
         _fullscreenToggle.isOn = Screen.fullScreen;
-        float volumeValue;
-        bool volumeResult = _mixer.GetFloat("volume", out volumeValue);
-        Debug.Log(volumeResult);
-        if(volumeResult){
-            _volumeSlider.value = volumeDBToPercent(volumeValue);
+        float volMasterValue;
+        float volMusicValue;
+        float volSoundEffectValue;
+        bool volMaster = _mixer.GetFloat("VolMaster", out volMasterValue);
+        bool volMusic = _mixer.GetFloat("VolMusic", out volMusicValue);
+        bool volSoundEffect = _mixer.GetFloat("VolSoundEffect", out volSoundEffectValue);
+        
+        if(volMaster){
+            _masterVolumeSlider.value = volumeDBToPercent(volMasterValue);
         }else{
-            volumeValue = 100;
+            volMasterValue = 100;
         }
+
+        if(volMusic){
+            _musicVolumeSlider.value = volumeDBToPercent(volMusicValue);
+        }else{
+            volMusicValue = 100;
+        }
+
+        if(volSoundEffect){
+            _soundEffectVolumeSlider.value = volumeDBToPercent(volSoundEffectValue);
+        }else{
+            volSoundEffectValue = 100;
+        }
+
         int currentResolution = 0;
         resolutions = Screen.resolutions;
         List<string> options = new List<string>();
@@ -45,9 +64,17 @@ public class SettingsMenuController : MonoBehaviour
     public void setFullScreen(bool b){
         Screen.fullScreen = b;
     }
-    public void setVolume(float v){
+    public void setMasterVolume(float v){
         float scaledV = volumePercentToDB(v);
-        _mixer.SetFloat("volume", scaledV);
+        _mixer.SetFloat("VolMaster", scaledV);
+    }
+    public void setMusicVolume(float v){
+        float scaledV = volumePercentToDB(v);
+        _mixer.SetFloat("VolMusic", scaledV);
+    }
+    public void setSoundEffectVolume(float v){
+        float scaledV = volumePercentToDB(v);
+        _mixer.SetFloat("VolSoundEffect", scaledV);
     }
     float volumePercentToDB(float p){
 
@@ -63,7 +90,7 @@ public class SettingsMenuController : MonoBehaviour
         StartCoroutine("closeMenu");
     }
     IEnumerator closeMenu(){
-        SEClick.playSound();
+        SE_click.playSound();
         yield return new WaitForSeconds(0.1f);
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("OptionMenu"));
     }

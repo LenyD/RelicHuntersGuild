@@ -627,7 +627,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 261980116}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.28494275
+  m_Size: 0.28484422
   m_NumberOfSteps: 9
   m_OnValueChanged:
     m_PersistentCalls:
@@ -792,6 +792,7 @@ MonoBehaviour:
   achievementsContainer: {fileID: 1366386406}
   achievementsPrefab: {fileID: 1953129555565490702, guid: bb6cc8c2fbb4ca949a94d6b1374709ab,
     type: 3}
+  SE_click: {fileID: 924358508}
 --- !u!114 &924358508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +818,7 @@ AudioSource:
   m_GameObject: {fileID: 924358502}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 74b8e461f27d9fb49b0a2baa515a98d2,
+  OutputAudioMixerGroup: {fileID: -109614439373322456, guid: 74b8e461f27d9fb49b0a2baa515a98d2,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1

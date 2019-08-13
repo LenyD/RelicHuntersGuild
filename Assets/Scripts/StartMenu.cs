@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public SoundEffect SEClick;
+    public SoundEffect SE_click;
     void Start() {
         InterScene.jsonDataString = InterScene.fetchJsonData("data.json");
 		InterScene.jsonSaveFileString= InterScene.fetchJsonData("savefile.json");
@@ -14,7 +14,7 @@ public class StartMenu : MonoBehaviour
         InterScene.resetSingleRunAchievementsProgress();
     }
     public void newGame(){
-        SEClick.playSound();
+        SE_click.playSound();
         StartCoroutine("loadSingleScene");
     }
     IEnumerator loadSingleScene(){
@@ -22,19 +22,19 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("ClassMenu", LoadSceneMode.Additive);
     }
     public void option(){
-        SEClick.playSound();
+        SE_click.playSound();
         SceneManager.LoadScene("OptionMenu", LoadSceneMode.Additive);
     }
     public void credits(){
-        SEClick.playSound();
+        SE_click.playSound();
         SceneManager.LoadScene("CreditsMenu", LoadSceneMode.Additive);
     }
     public void achievements(){
-        SEClick.playSound();
+        SE_click.playSound();
         SceneManager.LoadScene("AchievementsMenu", LoadSceneMode.Additive);
     }
     public void quit(){
-        SEClick.playSound();
+        SE_click.playSound();
         Application.Quit();
     }
 

@@ -149,7 +149,7 @@ public class ClassMenuButton : MonoBehaviour
         StartCoroutine("closeClassMenu");
     }
     IEnumerator closeClassMenu(){
-        //SEClick.playSound();
+        SE_click.playSound();
         yield return new WaitForSeconds(0.1f);
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("ClassMenu"));
     }

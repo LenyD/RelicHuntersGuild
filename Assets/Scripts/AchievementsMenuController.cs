@@ -8,6 +8,7 @@ public class AchievementsMenuController : MonoBehaviour
     Achievements achievementsData;
     public GameObject achievementsContainer;
     public GameObject achievementsPrefab;
+    public SoundEffect SE_click;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class AchievementsMenuController : MonoBehaviour
         StartCoroutine("closeMenu");
     }
     IEnumerator closeMenu(){
-        //SEClick.playSound();
+        SE_click.playSound();
         yield return new WaitForSeconds(0.1f);
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("AchievementsMenu"));
     }
