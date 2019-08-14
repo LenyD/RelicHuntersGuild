@@ -21,9 +21,11 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	public TrailRenderer trailRenderer;
 	string spritesPath = "CharacterSprites/";
+	public bool isPaused {get; set;}
 	
 
 	void Awake(){
+		isPaused=false;
 		//disableTrail();
 		_GM = FindObjectOfType<GameMaster>();
 		targetPos = transform.position;	
@@ -43,6 +45,9 @@ public class Player : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		if(isPaused){
+			return;
+		}
 		//MoveSet 1 (Locked to room)
 		//move between 9 part of a square unit
 		if(canMove){

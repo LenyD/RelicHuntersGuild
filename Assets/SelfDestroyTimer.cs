@@ -1,22 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class TitleScreenStart : MonoBehaviour
+public class SelfDestroyTimer : MonoBehaviour
 {
-    string nextSceneName = "ClassMenu";
+    public float timer = 1;
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(this.gameObject,timer);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0)){
-            SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
-        }
     }
 }

@@ -14,11 +14,13 @@ public class SettingsMenuController : MonoBehaviour
     public Slider _musicVolumeSlider;
     public Slider _soundEffectVolumeSlider;
     public Toggle _fullscreenToggle;
+    public Toggle _tutorialToggle;
     public SoundEffect SE_click;
+    public GameObject click;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Awake() {
         _fullscreenToggle.isOn = Screen.fullScreen;
+        _tutorialToggle.isOn = InterScene.toggleTutorial;
         float volMasterValue;
         float volMusicValue;
         float volSoundEffectValue;
@@ -28,21 +30,21 @@ public class SettingsMenuController : MonoBehaviour
         
         if(volMaster){
             _masterVolumeSlider.value = volumeDBToPercent(volMasterValue);
-        }else{
-            volMasterValue = 100;
-        }
+        }else{            
+            volMasterValue = 100;        
+        } 
 
         if(volMusic){
             _musicVolumeSlider.value = volumeDBToPercent(volMusicValue);
-        }else{
-            volMusicValue = 100;
-        }
+        }else{            
+            volMusicValue = 100;        
+        } 
 
         if(volSoundEffect){
             _soundEffectVolumeSlider.value = volumeDBToPercent(volSoundEffectValue);
-        }else{
-            volSoundEffectValue = 100;
-        }
+        }else{            
+            volSoundEffectValue = 100;        
+        }  
 
         int currentResolution = 0;
         resolutions = Screen.resolutions;
@@ -58,22 +60,35 @@ public class SettingsMenuController : MonoBehaviour
         _resolutionDropdown.AddOptions(options);
         _resolutionDropdown.value = currentResolution;
     }
+    void Start()
+    {
+        
+    }
     public void setResolution(int id){
+        InterScene.settings.resolutionId = id;
         Screen.SetResolution(resolutions[id].width,resolutions[id].height,Screen.fullScreenMode);
     }
     public void setFullScreen(bool b){
+        InterScene.settings.fullscreen = b;
         Screen.fullScreen = b;
+    }
+    public void setTutorial(bool b){
+        InterScene.settings.toggleTutorial = b;
+        InterScene.toggleTutorial = b;
     }
     public void setMasterVolume(float v){
         float scaledV = volumePercentToDB(v);
+        InterScene.settings.volume.master = scaledV;
         _mixer.SetFloat("VolMaster", scaledV);
     }
     public void setMusicVolume(float v){
         float scaledV = volumePercentToDB(v);
+        InterScene.settings.volume.music = scaledV;
         _mixer.SetFloat("VolMusic", scaledV);
     }
     public void setSoundEffectVolume(float v){
         float scaledV = volumePercentToDB(v);
+        InterScene.settings.volume.soundEffect = scaledV;
         _mixer.SetFloat("VolSoundEffect", scaledV);
     }
     float volumePercentToDB(float p){
@@ -87,11 +102,9 @@ public class SettingsMenuController : MonoBehaviour
     }
 
     public void closeOptionsMenu(){
-        StartCoroutine("closeMenu");
-    }
-    IEnumerator closeMenu(){
-        SE_click.playSound();
-        yield return new WaitForSeconds(0.1f);
+        GameObject sound = Instantiate(click);
+        SceneManager.MoveGameObjectToScene( sound,SceneManager.GetSceneAt(0));
+        sound.GetComponent<SoundEffect>().playSound();
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("OptionMenu"));
     }
 }

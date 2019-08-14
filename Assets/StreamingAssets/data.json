@@ -30,7 +30,7 @@
         {
             "id":3,
             "name": "Shiv",
-            "effect": "+1 DAMAGE",
+            "effect": "+1 ATTACK",
             "applyEffectFunction": "dagger1",
             "cost":20,
             "sprite":"dagger"
@@ -38,7 +38,7 @@
         {
             "id":4,
             "name": "Knife",
-            "effect": "+2 DAMAGE",
+            "effect": "+2 ATTACK",
             "applyEffectFunction": "dagger2",
             "cost":35,
             "sprite":"dagger"
@@ -46,7 +46,7 @@
         {
             "id":5,
             "name": "Dagger",
-            "effect": "+3 DAMAGE",
+            "effect": "+3 ATTACK",
             "applyEffectFunction": "dagger3",
             "cost":60,
             "sprite":"dagger"
@@ -158,7 +158,7 @@
         {
             "id":19,
             "name": "Thick Rusty Plate Armor",
-            "effect": "+3 BLOCK\n-1 DAMAGE",
+            "effect": "+3 BLOCK\n-1 ATTACK",
             "applyEffectFunction": "thickPlateArmor1",
             "cost":30,
             "sprite":"plate"
@@ -166,7 +166,7 @@
         {
             "id":20,
             "name": "Thick Plate Armor",
-            "effect": "+5 BLOCK\n-2 DAMAGE",
+            "effect": "+5 BLOCK\n-2 ATTACK",
             "applyEffectFunction": "thickPlateArmor2",
             "cost":60,
             "sprite":"plate"
@@ -190,7 +190,7 @@
         {
             "id":23,
             "name": "Leather Bracers",
-            "effect": "+3 EVASION\n-1 DAMAGE",
+            "effect": "+3 EVASION\n-1 ATTACK",
             "applyEffectFunction": "leatherBracers1",
             "cost":30,
             "sprite":"leather_bracers"
@@ -198,7 +198,7 @@
         {
             "id":24,
             "name": "Smooth Leather Bracers",
-            "effect": "+5 EVASION\n-2 DAMAGE",
+            "effect": "+5 EVASION\n-2 ATTACK",
             "applyEffectFunction": "leatherBracers2",
             "cost":60,
             "sprite":"leather_bracers"
@@ -238,7 +238,7 @@
         {
             "id":29,
             "name": "Blunt Greatsword",
-            "effect": "+3 DAMAGE\n-1 EVASION",
+            "effect": "+3 ATTACK\n-1 EVASION",
             "applyEffectFunction": "greatsword1",
             "cost":30,
             "sprite":"greatsword"
@@ -246,7 +246,7 @@
         {
             "id":30,
             "name": "Greatsword",
-            "effect": "+5 DAMAGE\n-2 EVASION",
+            "effect": "+5 ATTACK\n-2 EVASION",
             "applyEffectFunction": "greatsword2",
             "cost":60,
             "sprite":"greatsword"
@@ -254,7 +254,7 @@
         {
             "id":31,
             "name": "Flail",
-            "effect": "+3 DAMAGE\n-1 ACCURACY",
+            "effect": "+3 ATTACK\n-1 ACCURACY",
             "applyEffectFunction": "flail1",
             "cost":30,
             "sprite":"flail"
@@ -262,7 +262,7 @@
         {
             "id":32,
             "name": "Multi-headed Flail",
-            "effect": "+5 DAMAGE\n-2 ACCURACY",
+            "effect": "+5 ATTACK\n-2 ACCURACY",
             "applyEffectFunction": "flail2",
             "cost":60,
             "sprite":"flail"
@@ -270,7 +270,7 @@
         {
             "id":33,
             "name": "Halberd",
-            "effect": "+3 DAMAGE\n-1 BLOCK",
+            "effect": "+3 ATTACK\n-1 BLOCK",
             "applyEffectFunction": "halberd1",
             "cost":30,
             "sprite":"halberd"
@@ -278,7 +278,7 @@
         {
             "id":34,
             "name": "Sharpened Halberd",
-            "effect": "+5 DAMAGE\n-2 BLOCK",
+            "effect": "+5 ATTACK\n-2 BLOCK",
             "applyEffectFunction": "halberd2",
             "cost":60,
             "sprite":"halberd"
@@ -286,7 +286,7 @@
         {
             "id":35,
             "name": "Short Bow",
-            "effect": "+3 ACCURACY\n-1 DAMAGE",
+            "effect": "+3 ACCURACY\n-1 ATTACK",
             "applyEffectFunction": "shortBow1",
             "cost":30,
             "sprite":"short_bow"
@@ -294,7 +294,7 @@
         {
             "id":36,
             "name": "Handcrafted Short Bow",
-            "effect": "+5 ACCURACY\n-2 DAMAGE",
+            "effect": "+5 ACCURACY\n-2 ATTACK",
             "applyEffectFunction": "shortBow2",
             "cost":60,
             "sprite":"short_bow"
@@ -358,7 +358,7 @@
         {
             "id":44,
             "name": "Studded Leather Armor",
-            "effect": "+1 BLOCK\n+1 DAMAGE",
+            "effect": "+1 BLOCK\n+1 ATTACK",
             "applyEffectFunction": "studdedLeatherArmor1",
             "cost":30,
             "sprite":"studded_leather"
@@ -366,7 +366,7 @@
         {
             "id":45,
             "name": "Studded Hard Leather Armor",
-            "effect": "+2 BLOCK\n+1 DAMAGE",
+            "effect": "+2 BLOCK\n+1 ATTACK",
             "applyEffectFunction": "studdedLeatherArmor2",
             "cost":60,
             "sprite":"studded_leather"
@@ -374,7 +374,7 @@
         {
             "id":46,
             "name": "Heavily Studded Leather Armor",
-            "effect": "+2 DAMAGE\n+1 BLOCK",
+            "effect": "+2 ATTACK\n+1 BLOCK",
             "applyEffectFunction": "studdedLeatherArmor3",
             "cost":60,
             "sprite":"studded_leather"
@@ -406,7 +406,7 @@
         {
             "id":50,
             "name": "Studded pants",
-            "effect": "+1 EVASION\n+1 DAMAGE",
+            "effect": "+1 EVASION\n+1 ATTACK",
             "applyEffectFunction": "studdedPants1",
             "cost":30,
             "sprite":"studded_pants"
@@ -414,7 +414,7 @@
         {
             "id":51,
             "name": "Smooth Studded pants",
-            "effect": "+2 EVASION\n+1 DAMAGE",
+            "effect": "+2 EVASION\n+1 ATTACK",
             "applyEffectFunction": "studdedPants2",
             "cost":60,
             "sprite":"studded_pants"
@@ -422,7 +422,7 @@
         {
             "id":52,
             "name": "Heavily Studded pants",
-            "effect": "+2 DAMAGE\n+1 EVASION",
+            "effect": "+2 ATTACK\n+1 EVASION",
             "applyEffectFunction": "studdedPants3",
             "cost":60,
             "sprite":"studded_pants"
@@ -454,31 +454,31 @@
         {
             "id":56,
             "name": "Crossbow",
-            "effect": "+1 DAMAGE\n+1 ACCURACY",
+            "effect": "+1 ATTACK\n+1 ACCURACY",
             "applyEffectFunction": "crossbow1",
             "cost":30,
-            "sprite":"crossbow"
+            "sprite":"arbalest"
         },
         {
             "id":57,
             "name": "Heavy Crossbow",
-            "effect": "+2 DAMAGE\n+1 ACCURACY",
+            "effect": "+2 ATTACK\n+1 ACCURACY",
             "applyEffectFunction": "hvyCrossbow",
             "cost":60,
-            "sprite":"crossbow"
+            "sprite":"arbalest"
         },
         {
             "id":58,
             "name": "Marksman's Crossbow",
-            "effect": "+2 ACCURACY\n+1 DAMAGE",
+            "effect": "+2 ACCURACY\n+1 ATTACK",
             "applyEffectFunction": "crossbow2",
             "cost":60,
-            "sprite":"crossbow"
+            "sprite":"arbalest"
         },
         {
             "id":59,
             "name": "Strength Potion",
-            "effect": "+4 DAMAGE (Temporary)",
+            "effect": "+4 ATTACK (Temporary)",
             "applyEffectFunction": "strengthPotion",
             "cost":20,
             "sprite":"dmg_pot"
@@ -486,7 +486,7 @@
         {
             "id":60,
             "name": "Potent Strength Potion",
-            "effect": "+8 DAMAGE (Temporary)",
+            "effect": "+8 ATTACK (Temporary)",
             "applyEffectFunction": "potentStrengthPotion",
             "cost":35,
             "sprite":"dmg_pot"
@@ -656,7 +656,7 @@
         {
             "id":0,
             "name": "Excalibur",
-            "effect": "+7 DAMAGE",
+            "effect": "+7 ATTACK",
             "applyEffectFunction": "excalibur",
             "cost":3,
             "sprite":"excalibur"
@@ -818,7 +818,7 @@
             "evade"     :1,
             "strength"  :2,
             "accuracy"  :1,
-            "effect"    :"Damage can't be blocked",
+            "effect"    :"Always deals piercing damage",
             "applyEffectFunction":"addSpearman",
             "removeEffectFunction":"removeSpearman"
         },

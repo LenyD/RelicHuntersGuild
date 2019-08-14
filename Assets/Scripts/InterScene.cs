@@ -6,6 +6,20 @@ using System;
 
 
 [System.Serializable]
+public class Settings{
+    public int resolutionId;
+    public int quality;
+    public bool toggleTutorial;
+    public bool fullscreen;
+    public Volume volume;
+}
+[System.Serializable]
+public class Volume{
+    public float master;
+    public float music;
+    public float soundEffect;
+}
+[System.Serializable]
 public class JsonData
 {
     public Item[] items;
@@ -84,14 +98,16 @@ public class Achievement{
 }
 public static class InterScene
 {
+    public static bool toggleTutorial;
     public static string jsonDataString;
     public static string jsonSaveFileString;
+    public static string jsonSettingFileString;
     public static JsonData jsonData = new JsonData();
     public static SaveFile saveFile = new SaveFile();
+    public static Settings settings = new Settings();
     public static int currentTier {get;set;} = 0;
     public static float timer {get;set;} = 0;
     public static Unlocks unlocks= new Unlocks();
-
     public static int[] party {get;set;}
     public static string fetchJsonData(string fileName){
         return File.ReadAllText(Application.streamingAssetsPath + "/"+fileName);
@@ -99,10 +115,15 @@ public static class InterScene
     public static void parseJsonString(){
         JsonUtility.FromJsonOverwrite(jsonDataString,jsonData);
         JsonUtility.FromJsonOverwrite(jsonSaveFileString,saveFile);
+        JsonUtility.FromJsonOverwrite(jsonSettingFileString,settings);
     }
     public static void saveToFile(){
         string dataToSave = JsonUtility.ToJson(saveFile);
         File.WriteAllText(Application.streamingAssetsPath + "/savefile.json",dataToSave);
+    }
+    public static void saveSettingsToFile(){
+        string dataToSave = JsonUtility.ToJson(settings);
+        File.WriteAllText(Application.streamingAssetsPath + "/settings.json",dataToSave);
     }
     public static void addAchievementProgress(int id, int progress){
         if(!saveFile.achievements.achievementsUnlock[id]){

@@ -7,12 +7,15 @@ public class EndScreen : MonoBehaviour
 {
     public GameObject gameOver;
     public GameObject congratulation;
+    public DifficultyScaler _difficultyScaler;
     public SoundEffect SE_click;
+    public Player _player;
 
     // Start is called before the first frame update
 
     public void endGame(bool isGameOver){
         gameObject.SetActive(true);
+        _difficultyScaler.pauseTimer();
         gameOver.SetActive(isGameOver);
         congratulation.SetActive(!isGameOver);
     }
@@ -20,6 +23,14 @@ public class EndScreen : MonoBehaviour
         gameOver.SetActive(false);
         congratulation.SetActive(false);
         gameObject.SetActive(!gameObject.activeSelf);
+        //_player.isPaused = gameObject.activeSelf;
+        if(gameObject.activeSelf){
+            _difficultyScaler.pauseTimer();
+            Time.timeScale = 0;
+        }else{
+            _difficultyScaler.playTimer();
+            Time.timeScale = 1;
+        }
     }
     public void endExe(){
         Application.Quit();
@@ -32,9 +43,14 @@ public class EndScreen : MonoBehaviour
         SE_click.playSound();
         SceneManager.LoadScene("AchievementsMenu", LoadSceneMode.Additive);
     }
+    public void glossary(){
+        SE_click.playSound();
+        SceneManager.LoadScene("GlossaryMenu", LoadSceneMode.Additive);
+    }
     public void toMainMenu(){
         SceneManager.LoadScene("StartMenu",LoadSceneMode.Single);
     }
+
 
     // Update is called once per frame
     void Update()

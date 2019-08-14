@@ -2,16 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
     public SoundEffect SE_click;
+    public AudioMixer _mixer;   
     void Start() {
         InterScene.jsonDataString = InterScene.fetchJsonData("data.json");
-		InterScene.jsonSaveFileString= InterScene.fetchJsonData("savefile.json");
-		InterScene.parseJsonString();
+        InterScene.jsonSaveFileString= InterScene.fetchJsonData("savefile.json");
+        InterScene.jsonSettingFileString= InterScene.fetchJsonData("settings.json");
+        InterScene.parseJsonString();
         InterScene.resetSingleRunAchievementsProgress();
+        Debug.Log(InterScene.settings.toggleTutorial);
+        SetupSettings();
+    }
+    void SetupSettings(){
+        _mixer.SetFloat("VolMaster", InterScene.settings.volume.master);
+        _mixer.SetFloat("VolMusic", InterScene.settings.volume.music);
+        _mixer.SetFloat("VolSoundEffect", InterScene.settings.volume.soundEffect);
+        InterScene.toggleTutorial = InterScene.settings.toggleTutorial;
     }
     public void newGame(){
         SE_click.playSound();

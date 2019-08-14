@@ -1349,7 +1349,7 @@ MonoBehaviour:
   meditateParticles: {fileID: 0}
   lootPopUp: {fileID: 1397725244}
   _endScreen: {fileID: 0}
-  _difficultyScaler: {fileID: 6735020473917736770}
+  _difficultyScaler: {fileID: 7984219173405115938}
   popUpPrefab: {fileID: 5804915345120770435, guid: cfa9ea3ae705eb7409fb788f5457343b,
     type: 3}
   popUpSprites:
@@ -1375,7 +1375,7 @@ AudioSource:
   m_GameObject: {fileID: 489728039662162058}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 74b8e461f27d9fb49b0a2baa515a98d2,
+  OutputAudioMixerGroup: {fileID: -109614439373322456, guid: 74b8e461f27d9fb49b0a2baa515a98d2,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   AS: {fileID: 489728040287373848}
   clips:
   - {fileID: 8300000, guid: 9d42d39f3c8edb6468e32e18627378b6, type: 3}
-  volume: 0.5
+  volume: 1
 --- !u!114 &489728040287373850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4003,7 +4003,7 @@ GameObject:
   - component: {fileID: 4827518499749584575}
   - component: {fileID: 2148036850720857896}
   - component: {fileID: 4590242312564750079}
-  - component: {fileID: 6735020473917736770}
+  - component: {fileID: 7984219173405115938}
   m_Layer: 5
   m_Name: Difficulty
   m_TagString: Untagged
@@ -4094,7 +4094,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6735020473917736770
+--- !u!114 &7984219173405115938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4103,7 +4103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8996201991298064128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe47ec7d003bf8d46bc212f8b8157b9a, type: 3}
+  m_Script: {fileID: 11500000, guid: e5847e4086d1f984284bc4a8079de73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1678441500749619731}

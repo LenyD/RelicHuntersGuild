@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DiffcultyScaler : MonoBehaviour
+public class DifficultyScaler : MonoBehaviour
 {
     public Text timeText;
     public Text levelText;

@@ -20,7 +20,7 @@ public class Torch : MonoBehaviour
         {
                 particlesArray[i].Play();
         }
-        fireLight.enabled = true;
+        //fireLight.enabled = true;
     }
 
     // Update is called once per frame

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6177763356018919313}
   - component: {fileID: 8546446661957951546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: accIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6771476298408983728}
   - component: {fileID: 3101895372319339641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TrainingStrength
   m_TagString: Untagged
   m_Icon: {fileID: 0}

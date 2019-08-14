@@ -15332,6 +15332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SE_click: {fileID: 924358508}
+  _mixer: {fileID: 24100000, guid: 74b8e461f27d9fb49b0a2baa515a98d2, type: 2}
 --- !u!114 &924358508
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ using System.Text;
 public class GameMaster : MonoBehaviour {
 
 	Camera mainCam;
-	bool toggleTutorial = true;
 	float zoomedOutCamSize;
 	float zoomedInCamSize = 0.8f;
 	Coroutine zoomCoroutine;
@@ -64,7 +63,7 @@ public class GameMaster : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		createLinks();
-		if(toggleTutorial){
+		if(InterScene.toggleTutorial){
 			setUpTutorial();
 		}else{
 			setUpMap();
@@ -292,26 +291,16 @@ public class GameMaster : MonoBehaviour {
 				}
 			}
 		}
-		getRoomAt(1,1).setTutorialText("WASD / Arrows to move\nR to heal hp & stamina");
+		getRoomAt(0,1).setTutorialText("WASD / Arrows to move\nR to rest\n(heal hp & stamina)\nEsc to open the menu. The glossary have more details");
 		getRoomAt(4,1).setRoomEvent(4);
-		//getRoomAt(4,1).setTutorialText("Test");
 		getRoomAt(5,1).setRoomEvent(3);
-		//getRoomAt(6,1).setTutorialText("Cool text that is pretty long to test how long i can write a description for these tutorial thingy-ma-jiggy");
 		getRoomAt(5,1).setTutorialText("Cursed room reduce your stats temporarely, effect countered from blessing");
 		getRoomAt(9,1).setRoomEvent(5);
 		getRoomAt(9,1).setTutorialText("Blessed room increase your stats temporarely, effect countered from curse");
-		getRoomAt(8,5).setRoomEvent(6);
-		getRoomAt(8,5).setTutorialText("Alchemy tables increase your stats temporarely and heal you");
-		getRoomAt(5,5).setRoomEvent(7);
-		getRoomAt(5,5).setTutorialText("Rest camp heals your hp & stamina, reduce effectiveness after every use");
-		getRoomAt(4,3).setRoomEvent(9);
-		getRoomAt(4,3).setTutorialText("Increase a stat at the cost of stamina");
-		getRoomAt(1,3).setRoomEvent(1);
-		getRoomAt(1,3).setTutorialText("Trapped room can be dodged");
+		getRoomAt(4,3).setRoomEvent(1);
+		getRoomAt(4,3).setTutorialText("Dodge traps by moving around");
 		getRoomAt(1,6).setRoomEvent(2);
 		getRoomAt(0,6).setTutorialText("While in combat, fill your nodes to attack(1-4), acc & att to deal damage while block & dodge increase your defense");
-		getRoomAt(3,8).setRoomEvent(50);
-		getRoomAt(3,8).addShopFloor();
 		getRoomAt(6,8).setRoomEvent(100);
 		getRoomAt(6,8).setTutorialText("This room will take you to the next floor");
 		getRoomAt(6,8).addBossFloor();

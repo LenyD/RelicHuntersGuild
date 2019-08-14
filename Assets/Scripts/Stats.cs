@@ -53,7 +53,7 @@ public class Stats : MonoBehaviour
     public Image lootPopUp;
     Animator lootpopUpAnim;
     public EndScreen _endScreen;
-    public DiffcultyScaler _difficultyScaler;
+    public DifficultyScaler _difficultyScaler;
     public GameObject popUpPrefab;
     public Sprite[] popUpSprites;
     /*
