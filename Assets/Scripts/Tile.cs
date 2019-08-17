@@ -54,6 +54,7 @@ public class Tile : Wall {
 		if(_r.enabled != b){
 		_r.enabled = b;
 			if(b){
+				//Instantiate decoration if needed
 				switch(roomEventId){
 					case 4:
 						chest = (GameObject)Instantiate(Resources.Load("Loot"),new Vector3(0,0,0),Quaternion.Euler(-65,0,0));

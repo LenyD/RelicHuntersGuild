@@ -10,15 +10,16 @@ public class StartMenu : MonoBehaviour
     public SoundEffect SE_click;
     public AudioMixer _mixer;   
     void Start() {
+        //Fetch JSON data from files and parse it to InterScene
         InterScene.jsonDataString = InterScene.fetchJsonData("data.json");
         InterScene.jsonSaveFileString= InterScene.fetchJsonData("savefile.json");
         InterScene.jsonSettingFileString= InterScene.fetchJsonData("settings.json");
         InterScene.parseJsonString();
         InterScene.resetSingleRunAchievementsProgress();
-        Debug.Log(InterScene.settings.toggleTutorial);
         SetupSettings();
     }
     void SetupSettings(){
+        //Set saved volumes/settings on reset
         _mixer.SetFloat("VolMaster", InterScene.settings.volume.master);
         _mixer.SetFloat("VolMusic", InterScene.settings.volume.music);
         _mixer.SetFloat("VolSoundEffect", InterScene.settings.volume.soundEffect);

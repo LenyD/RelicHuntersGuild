@@ -31,14 +31,18 @@ public class DifficultyScaler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Do nothing if paused
         if(isPaused){
             return;
         }
+        //Reduce time
+        //set difficulty level
         timeInSec += Time.deltaTime*timeSpeed;
         level = Mathf.FloorToInt(timeInSec/numberOfSecondsPerLevel);
         if(level >= InterScene.jsonData.lootTables.Length){
             level =InterScene.jsonData.lootTables.Length-1;
         }
+        //Save current level
         InterScene.currentTier = level;
         levelText.text = level.ToString();
         timeText.text = Mathf.CeilToInt(numberOfSecondsPerLevel-(timeInSec%numberOfSecondsPerLevel)).ToString();

@@ -10,9 +10,11 @@ public class BattlePopUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Destroy after delay
         Destroy(this.gameObject,duration);
     }
     public void setUp(Sprite[] images,Vector2 pos){
+        //Set sprites
         GetComponent<RectTransform>().anchoredPosition = pos;
         signImg.sprite = images[0];
         effectImg.sprite = images[1];

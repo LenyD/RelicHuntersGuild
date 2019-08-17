@@ -155,7 +155,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0445e73f422a8ce449a8ec79fdfcd0f3, type: 3}
   - {fileID: 2800000, guid: 19329895a012e884ca548bcc24b24d6d, type: 3}
   _GM: {fileID: 0}
-  burnColor: {r: 0.78431374, g: 0, b: 0.18431373, a: 1}
+  burnColor: {r: 0.78431374, g: 0.21568628, b: 0, a: 1}
   directory: TileSprites/
   torch: {fileID: 0}
   torchSpawnTransform: {fileID: 0}

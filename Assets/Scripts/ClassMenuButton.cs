@@ -25,14 +25,11 @@ public class ClassMenuButton : MonoBehaviour
     void Awake(){
         buttonWidth = classButtonPrefab.GetComponent<RectTransform>().rect.width;
         buttonHeight = classButtonPrefab.GetComponent<RectTransform>().rect.height;
-		InterScene.jsonDataString = InterScene.fetchJsonData("data.json");
-		InterScene.jsonSaveFileString= InterScene.fetchJsonData("savefile.json");
-		InterScene.parseJsonString();
         numberOfButtons = InterScene.jsonData.explorers.Length;
-        InterScene.resetSingleRunAchievementsProgress();
     }
 
     void Start(){
+        //Instantiate classButtons
         party = new int[maxNumberOfMember];
         for (int i = 0; i < party.Length; i++)
         {

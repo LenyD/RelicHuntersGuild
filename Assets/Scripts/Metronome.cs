@@ -36,7 +36,7 @@ public class Metronome : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Check combat input & control metronome CD
         cooldown -= Time.deltaTime;
         currentAngle =Mathf.Sin(Mathf.PI/2 * speed*Time.time)*rotationLimit;
         transform.rotation = Quaternion.Euler(0,0,currentAngle);

@@ -12,8 +12,6 @@ public class EnemyNode : Node
         powerDivider = 10;
         delayToSend = 1f;
         image = GetComponent<Image>();
-        startFill = 0;
-        targetFill = 0;
         isPlayerPopUp = false;
     }
     public void init(BattleController battleC){

@@ -14,6 +14,7 @@ public class CreditsMenuController : MonoBehaviour
     }
 
     public void closeCreditsMenu(){
+        //Close credits menu
         GameObject sound = Instantiate(click);
         SceneManager.MoveGameObjectToScene( sound,SceneManager.GetSceneAt(0));
         sound.GetComponent<SoundEffect>().playSound();

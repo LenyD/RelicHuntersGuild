@@ -14,16 +14,21 @@ public class EndScreen : MonoBehaviour
     // Start is called before the first frame update
 
     public void endGame(bool isGameOver){
+        //Stop game and pause it.
         gameObject.SetActive(true);
         _difficultyScaler.pauseTimer();
+        Time.timeScale = 0;
+        //Enable gameover text;
         gameOver.SetActive(isGameOver);
-        congratulation.SetActive(!isGameOver);
+        //congratulation.SetActive(!isGameOver);
     }
     public void toggleEndScreen(){
+        //Open screen, disable gameover Text
         gameOver.SetActive(false);
         congratulation.SetActive(false);
+        //open menu
         gameObject.SetActive(!gameObject.activeSelf);
-        //_player.isPaused = gameObject.activeSelf;
+        //pause time
         if(gameObject.activeSelf){
             _difficultyScaler.pauseTimer();
             Time.timeScale = 0;
@@ -48,6 +53,7 @@ public class EndScreen : MonoBehaviour
         SceneManager.LoadScene("GlossaryMenu", LoadSceneMode.Additive);
     }
     public void toMainMenu(){
+        Time.timeScale = 1;
         SceneManager.LoadScene("StartMenu",LoadSceneMode.Single);
     }
 

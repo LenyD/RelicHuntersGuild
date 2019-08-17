@@ -12,14 +12,18 @@ public class AchievementsMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Get data
         achievementsData = InterScene.saveFile.achievements;
+        //Fill panels with data
         setUpAchievements();
     }
 
     void setUpAchievements(){
+        //set up the container to be the good height
         achievementsContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(achievementsContainer.GetComponent<RectTransform>().sizeDelta.x,150*achievementsData.list.Length);
         for (int i = 0; i < achievementsData.list.Length; i++)
         {
+            //instantiate each panel and fills info
             GameObject panel = (GameObject)Instantiate(achievementsPrefab);
             panel.transform.SetParent(achievementsContainer.transform,false);
             panel.GetComponent<AchievementPanel>().setUp(achievementsData.list[i],achievementsData.achievementsUnlock[i]);
@@ -29,6 +33,7 @@ public class AchievementsMenuController : MonoBehaviour
     }
 
     public void closeAchievementsMenu(){
+        //Close scene
         GameObject sound = Instantiate(click);
         SceneManager.MoveGameObjectToScene( sound,SceneManager.GetSceneAt(0));
         sound.GetComponent<SoundEffect>().playSound();

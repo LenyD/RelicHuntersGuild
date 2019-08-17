@@ -8,13 +8,11 @@ public class EnemyOffenceNode : EnemyNode
     // Start is called before the first frame update
     void Start()
     {
+        image = GetComponent<Image>();
+        effect = 3;
+        isPlayerPopUp = false;
         powerDivider = 10;
         delayToSend = 1f;
-        image = GetComponent<Image>();
-        startFill = 0;
-        targetFill = 0;
-        isPlayerPopUp = false;
-        effect = 3;
     }
     public override void applyEffect(){
         _s.receiveDamage(effect,0);

@@ -24,6 +24,7 @@ public class ItemButton:MonoBehaviour
     }
 
     public void setItem(Merchant m,int arrayPos){
+        //Set up item from merchant info
         id = arrayPos;
         currentMerchant = m;
 
@@ -38,7 +39,9 @@ public class ItemButton:MonoBehaviour
     }
 
     public void reduceStock(){
+        //Reduce the stock of the item
         if(currentMerchant.getIsRelic()){
+            //If it's a relic shop, consume relics
             if(InterScene.saveFile.stats.artifact>=cost){
                 if(currentMerchant.getInStock(id)){
                     currentMerchant.setInStock(id,false);
@@ -51,6 +54,7 @@ public class ItemButton:MonoBehaviour
                 SE_coinMissing.playSound();
             }
         }else{
+            //Consume gold
             if(_s.getGold()>=cost){
                 if(currentMerchant.getInStock(id)){
                     currentMerchant.setInStock(id,false);

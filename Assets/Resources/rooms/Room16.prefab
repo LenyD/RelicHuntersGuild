@@ -109,7 +109,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0445e73f422a8ce449a8ec79fdfcd0f3, type: 3}
   - {fileID: 2800000, guid: 19329895a012e884ca548bcc24b24d6d, type: 3}
   _GM: {fileID: 0}
-  burnColor: {r: 0.78431374, g: 0, b: 0.1826679, a: 1}
+  burnColor: {r: 0.78431374, g: 0.21568628, b: 0, a: 1}
   directory: WallSprites/
   torch: {fileID: 0}
   torchSpawnTransform: {fileID: 0}
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 2555475781325893005}
   m_LocalRotation: {x: 0.08715578, y: -0, z: -0, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.782, y: 1, z: 1}
+  m_LocalScale: {x: 0.7813, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8551134577793818815}
   m_RootOrder: 1
@@ -363,7 +363,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0445e73f422a8ce449a8ec79fdfcd0f3, type: 3}
   - {fileID: 2800000, guid: 19329895a012e884ca548bcc24b24d6d, type: 3}
   _GM: {fileID: 0}
-  burnColor: {r: 0.78431374, g: 0, b: 0.1826679, a: 1}
+  burnColor: {r: 0.78431374, g: 0.21568628, b: 0, a: 1}
   directory: SideWallSprite/
   torch: {fileID: 105492, guid: a9f2d6d9fbe2a3c469410ad94cff2c3b, type: 3}
   torchSpawnTransform: {fileID: 7058845571336535531}
@@ -424,7 +424,7 @@ Transform:
   m_GameObject: {fileID: 4802348875663172157}
   m_LocalRotation: {x: 0.10157721, y: -0, z: -0, w: 0.9948277}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.782, y: 1, z: 1}
+  m_LocalScale: {x: 0.7813, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7066581560905435281}
   m_RootOrder: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0445e73f422a8ce449a8ec79fdfcd0f3, type: 3}
   - {fileID: 2800000, guid: 19329895a012e884ca548bcc24b24d6d, type: 3}
   _GM: {fileID: 0}
-  burnColor: {r: 0.78431374, g: 0, b: 0.1826679, a: 1}
+  burnColor: {r: 0.78431374, g: 0.21568628, b: 0, a: 1}
   directory: WallSprites/
   torch: {fileID: 105492, guid: a9f2d6d9fbe2a3c469410ad94cff2c3b, type: 3}
   torchSpawnTransform: {fileID: 6719193046893569715}
@@ -711,7 +711,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0445e73f422a8ce449a8ec79fdfcd0f3, type: 3}
   - {fileID: 2800000, guid: 19329895a012e884ca548bcc24b24d6d, type: 3}
   _GM: {fileID: 0}
-  burnColor: {r: 0.78431374, g: 0, b: 0.1826679, a: 1}
+  burnColor: {r: 0.78431374, g: 0.21568628, b: 0, a: 1}
   directory: SideWallSprite/
   torch: {fileID: 105492, guid: a9f2d6d9fbe2a3c469410ad94cff2c3b, type: 3}
   torchSpawnTransform: {fileID: 475510529763390617}

@@ -8,13 +8,11 @@ public class EnemyEvasionNode : EnemyNode
     // Start is called before the first frame update
     void Start()
     {
+        image = GetComponent<Image>();
+        effect = 25;
+        isPlayerPopUp = false;
         powerDivider = 10;
         delayToSend = 1f;
-        image = GetComponent<Image>();
-        startFill = 0;
-        targetFill = 0;
-        isPlayerPopUp = false;
-        effect = 25;
     }
     public override void applyEffect(){
         _m.addDodge(effect);

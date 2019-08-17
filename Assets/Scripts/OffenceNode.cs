@@ -13,6 +13,7 @@ public class OffenceNode : Node
         image = GetComponent<Image>();
     }
     public override void applyEffect(){
+        //Deal normal damage
         _m.receiveDamage(effect,0);
     }
     

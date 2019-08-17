@@ -12,6 +12,9 @@ public class AchievementPanel : MonoBehaviour
     public Toggle toggle;
     // Start is called before the first frame update
     public void setUp(Achievement data, bool isUnlocked){
+        //Set up text
+        //if unlocked, check toggle and strike text.
+
         toggle.isOn = isUnlocked;
         if(isUnlocked){
             Title.fontStyle = FontStyles.Strikethrough;

@@ -62,6 +62,7 @@ public class Room : MonoBehaviour {
 		}
 	}
 	public void addShopFloor(){
+		//Add shop floor over the tile
 		GameObject shopFloor = (GameObject)Instantiate(Resources.Load("Shop"),new Vector3(0,0,-0.01f),Quaternion.Euler(0,0,0));
 		shopFloor.transform.SetParent(floor.transform,false);
 		Merchant _merchant = this.gameObject.AddComponent<Merchant>();
@@ -69,6 +70,7 @@ public class Room : MonoBehaviour {
 		_merchant.generateInventory();
 	}
 	public void addArtifactShopFloor(){
+		//Add shop floor over the tile
 		GameObject shopFloor = (GameObject)Instantiate(Resources.Load("Shop"),new Vector3(0,0,-0.01f),Quaternion.Euler(0,0,0));
 		shopFloor.transform.SetParent(floor.transform,false);
 		Merchant _merchant = this.gameObject.AddComponent<Merchant>();
@@ -78,6 +80,7 @@ public class Room : MonoBehaviour {
 	}
 	
 	public void addBossFloor(){
+		//Add stair floor over the tile
 		GameObject bossFloor = (GameObject)Instantiate(Resources.Load("BossRoom"),new Vector3(0,0,-0.02f),Quaternion.Euler(0,0,0));
 		floor.removeAlchTable();
 		floor.removeDummy();

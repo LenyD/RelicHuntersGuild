@@ -32,7 +32,9 @@ public class Monster : MonoBehaviour
         }
     }
     public void init(float medusaStrength,float stunStrengthMultiplier){
+        //Initiate at the start of combat
         generateProfile();
+        //Initiate every Enemy nodes
         for (int i = 0; i < nodes.Length; i++)
         {
             nodes[i].init(_bc);
@@ -43,6 +45,7 @@ public class Monster : MonoBehaviour
         resetDodge();
     }
     public void startCombat(){
+        //Start Coroutines
         cr = new Coroutine[nodes.Length];
         for (int i = 0; i < nodes.Length; i++)
         {
@@ -82,25 +85,33 @@ public class Monster : MonoBehaviour
         _bc.monsterImage.sprite = Resources.Load<Sprite>("MonsterSprites/"+InterScene.jsonData.EnemiesTables[tier].table[rng].image);
     }
     public void receiveDamage(int damage,int piercingDamage){
+        //Receive damage
         Sprite[] sprites;
+        //Check for evasion
         if(evadeCheck()){
+            //if dodged, reset dodge and cancel damage
             resetDodge();
             sprites = new Sprite[]{popUpSprites[1],popUpSprites[5]};
             _bc.createPopUp(sprites,false);
             return;
         }
+        //Add spearman effect
         piercingDamage+=spearmanPower;
         damage = Mathf.Max(0,damage-spearmanPower);
+        //Save start dmg
+        int startDamage = damage;
+        //Reduce normal damage by block
         damage = Mathf.Max(0,damage - block);
         int finalDmg = damage+piercingDamage;
-        reduceBlock(finalDmg);
-        if(finalDmg>0 || piercingDamage>0){
+        //reduce block by start dmg+piercing
+        reduceBlock(startDamage+piercingDamage);
+        if(finalDmg>0){
             sprites = new Sprite[]{popUpSprites[1],popUpSprites[2]}; 
         }else{
             sprites = new Sprite[]{popUpSprites[1],popUpSprites[4]}; 
         }
         _bc.createPopUp(sprites,false);
-        _bc.createPopUp(sprites,false);
+        //Reduce hp
         statProfile[0] -= finalDmg;
         SE_hurt.playSound();
         if(getHp() <= 0 ){

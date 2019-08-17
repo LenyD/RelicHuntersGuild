@@ -17,22 +17,26 @@ public class ClassButton : MonoBehaviour
     public Image lockImg;
 
     public void addClassMenuListener(ClassMenuButton cmb){
+        //Add onClick event
         classMenu=cmb;
         setLocked(!InterScene.saveFile.charactersUnlock[id]);
         bt.onClick.AddListener(OnClickClassMenu);
     }
     public void addPartyEditorListener(PartyEditor editor){
+        //Add onClick event
         _pe=editor;
         bt.onClick.AddListener(OnClickPartyEditor);
     }
 
     void OnClickClassMenu(){
+        //Activate classmenu
         if(!isUnlocked){
             return;
         }
         classMenu.activateButton(id);
     }
     void OnClickPartyEditor(){
+        //Activate partyEditor
         if(!isUnlocked){
             return;
         }
@@ -40,6 +44,7 @@ public class ClassButton : MonoBehaviour
     }
 
     public void setSprite(string spriteName){
+        //Set sprite of the button
         Sprite characterSprite = Resources.Load<Sprite>("CharacterSprites/"+spriteName);
         if(characterSprite == null){
             characterSprite = Resources.Load<Sprite>("CharacterSprites/Default");
@@ -50,6 +55,7 @@ public class ClassButton : MonoBehaviour
         return texts;
     }
     public void setLocked(bool isLocked){
+        //Show/hide lock
         if(isLocked){
             lockImg.enabled=true;
             bt.interactable = false;

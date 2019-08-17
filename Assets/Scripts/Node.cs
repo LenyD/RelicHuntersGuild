@@ -31,6 +31,7 @@ public class Node : MonoBehaviour
         reduceCooldown();
     }
     public void init(BattleController battleC,Monster m,int p,int chances){
+        //set up at the start of combat
         anim.gameObject.SetActive(false);
         _bc = battleC;
         _m = m;
@@ -39,6 +40,7 @@ public class Node : MonoBehaviour
         image.fillAmount = startFill;
         power = p;
         icon.color = onCDColor;
+        //chances to start already filled
         if(Random.Range(chances,chances+100)>100){
             increaseSize(100f);
         }
@@ -80,6 +82,7 @@ public class Node : MonoBehaviour
     }
 
     public bool increaseSize(float increment){
+        //Increase in size, return false if on CD
         if(cooldown<=0){
             if(targetFill>= threshold){
                 sendPower();
@@ -93,6 +96,7 @@ public class Node : MonoBehaviour
         return false;
     }
     public void reduceSize(float decrement, float divider){
+        //Reduce size
         targetFill = Mathf.Max(targetFill - (1 * decrement/divider),0);
         Sprite[] sprites = new Sprite[]{popUpSprites[1],popUpSprites[3]};
         _bc.createPopUp(sprites,isPlayerPopUp);

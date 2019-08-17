@@ -364,17 +364,26 @@ public class Stats : MonoBehaviour
             }
         }
     }
-    public void receiveDamage(int damage,int piercingDamage){
+    public void receiveDamage(int damage,int piercingDamage){        
+        //Receive damage
+
         Sprite[] sprites;
+        //Check for evasion
         if(evadeCheck()){
+            //if dodged, reset dodge and cancel damage
             resetDodge();
             sprites = new Sprite[]{popUpSprites[1],popUpSprites[5]};
             _bc.createPopUp(sprites,false);
             return;
         }
+        //Save start dmg
+        int startDamage = damage;
+        //Reduce normal damage by block
         damage = Mathf.Max(0,damage - block);
         int finalDmg = damage+piercingDamage;
-        reduceBlock(finalDmg);
+        //reduce block by start dmg+piercing
+        reduceBlock(startDamage+piercingDamage);
+        //Reduce hp
         if(finalDmg>0 || piercingDamage>0){
             sprites = new Sprite[]{popUpSprites[1],popUpSprites[2]}; 
         }else{

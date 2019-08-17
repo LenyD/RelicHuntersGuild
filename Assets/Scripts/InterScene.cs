@@ -157,7 +157,9 @@ public static class InterScene
         int[] idList = new int[]{0,2,3,4,5,6,10,12};
         for (int i = 0; i < idList.Length; i++)
         {
-            resetAchievementProgress(idList[i]);
+            if(!saveFile.achievements.achievementsUnlock[idList[i]]){
+                resetAchievementProgress(idList[i]);
+            }
         }
     }
 }

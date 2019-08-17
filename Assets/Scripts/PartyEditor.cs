@@ -28,12 +28,14 @@ public class PartyEditor : MonoBehaviour
     }
 
     public void setUpCanvas(){
+        //Set up on event
         this.GetComponent<Canvas>().enabled=true;
         gameObject.SetActive(true);
         generateCharacters();
         refreshButtonsStats();
     }
     void refreshButtonsStats(){
+        //set Buttons stats and active by following buttons[] array
         for (int i = 0; i < partySpaces.Length; i++)
         {
             fillButtonStats(partySpaces[i],i);
@@ -86,6 +88,7 @@ public class PartyEditor : MonoBehaviour
     }
 
     int fetchRandomCharacter(){
+        //Get a random character not already generated or return empty id(-1)
         int numberOfCharMax = InterScene.party.Length *-1;
         for (int i = 0; i < InterScene.saveFile.charactersUnlock.Length; i++)
         {
@@ -129,6 +132,7 @@ public class PartyEditor : MonoBehaviour
         return returnValue;
     }
     public void activateButton(int id){
+        //OnClick event method
         if(id>3){
             for (int i = 0; i < partySpaces.Length; i++)
             {
@@ -158,6 +162,8 @@ public class PartyEditor : MonoBehaviour
         List<int> newCharacters = new List<int>();
         List<int> removedCharacters = new List<int>();
         List<int> newParty = new List<int>();
+        //Set new current party
+        //Get removed character
         for (int i = 0; i < InterScene.party.Length; i++)
         {
             for (int j = 0; j < partySpaces.Length; j++)
@@ -192,6 +198,7 @@ public class PartyEditor : MonoBehaviour
 		    InterScene.setAchievementProgress(12,partySpaces.Length - newParty.Count);
             InterScene.party = newParty.ToArray();
             _player.setCharacterSprites(InterScene.party);
+            //Remove effect of removed char & add effect of new char
             _s.fillStats(newCharacters.ToArray());
             _s.removeCharactersStats(removedCharacters.ToArray());
             _s.applyClassEffect(newCharacters.ToArray());

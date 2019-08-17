@@ -44,6 +44,7 @@ public class BattleController : MonoBehaviour
     }
 
     public void init(){
+        //Initiate at the start of combat
         _s.resetBlock();
         _s.resetDodge();
         bombCD = bombCDReset;
@@ -52,8 +53,10 @@ public class BattleController : MonoBehaviour
         gameObject.SetActive(true);
         bombBtAnim.gameObject.SetActive(false);
         monster.init(medusaStrength,stunStrengthMultiplier);
+        //Process your stats vs monster stats
         playerProcessedStats = processStats(_s.getCurrentStatProfile(),monster.getCurrentStatProfile());
         monsterProcessedStats = processStats(monster.getCurrentStatProfile(),_s.getCurrentStatProfile());
+        /* 
         string DebugString ="";
         for (int i = 0; i < playerProcessedStats.Length; i++)
         {
@@ -65,6 +68,7 @@ public class BattleController : MonoBehaviour
             DebugString+=  monsterProcessedStats[i]+","; 
         }
         Debug.Log(DebugString);
+        */
         metronome.init();
         playerImage.sprite = Resources.Load<Sprite>("CharacterSprites/"+InterScene.jsonData.explorers[InterScene.party[0]].name);
 
@@ -80,8 +84,8 @@ public class BattleController : MonoBehaviour
         for (int i = 0; i < profile1.Length; i++)
         {
             int stat = profile1[i]-profile2[i];
-            //if > 4 => 4
-            stat = Mathf.Min(stat,4);
+            //if > 5 => 5
+            stat = Mathf.Min(stat,5);
             //if < 0 => 0
             stat = Mathf.Max(stat,0);
             processedProfile[i] = stat+1;
@@ -90,8 +94,10 @@ public class BattleController : MonoBehaviour
     }
 
     public void createPopUp(Sprite[] images,bool isTargetingPlayer){
+        //Instantiate pop up over portrait
         GameObject bpopup = Instantiate(popUpPrefab,new Vector3(),Quaternion.identity,this.transform);
         Vector2 v2;
+        //Position of monster or player portrait
         if(isTargetingPlayer){
             v2 = playerImage.GetComponent<RectTransform>().anchoredPosition;
         }else{
@@ -130,6 +136,7 @@ public class BattleController : MonoBehaviour
     void Update()
     {
         if(isInCombat){
+            //Reduce bomb CD
             bombCD-=Time.deltaTime;
             bombBtImage.fillAmount = 1-bombCD;
             if(bombCD<0){
@@ -158,9 +165,11 @@ public class BattleController : MonoBehaviour
     }
     
     public void updateBlockText(int block){
+        //set number of block text
         blockText.text = block.ToString();
     }
     public void updateDodgeText(int dodge){
+        //set number of dodge chance text
         dodgeText.text = dodge.ToString();
     }
 

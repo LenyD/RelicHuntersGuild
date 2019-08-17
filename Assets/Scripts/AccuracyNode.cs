@@ -13,6 +13,7 @@ public class AccuracyNode : Node
         image = GetComponent<Image>();
     }
     public override void applyEffect(){
+        //Deal 1 dmg + 1 piercing dmg
         _m.receiveDamage(effect,effect);
     }
     

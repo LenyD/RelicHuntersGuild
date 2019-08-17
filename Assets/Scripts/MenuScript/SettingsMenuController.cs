@@ -19,6 +19,7 @@ public class SettingsMenuController : MonoBehaviour
     public GameObject click;
     // Start is called before the first frame update
     void Awake() {
+        //Initiate form to fit current settings
         _fullscreenToggle.isOn = Screen.fullScreen;
         _tutorialToggle.isOn = InterScene.toggleTutorial;
         float volMasterValue;
@@ -27,7 +28,7 @@ public class SettingsMenuController : MonoBehaviour
         bool volMaster = _mixer.GetFloat("VolMaster", out volMasterValue);
         bool volMusic = _mixer.GetFloat("VolMusic", out volMusicValue);
         bool volSoundEffect = _mixer.GetFloat("VolSoundEffect", out volSoundEffectValue);
-        
+        //Set sound to saved sound file for each channel
         if(volMaster){
             _masterVolumeSlider.value = volumeDBToPercent(volMasterValue);
         }else{            
@@ -45,10 +46,10 @@ public class SettingsMenuController : MonoBehaviour
         }else{            
             volSoundEffectValue = 100;        
         }  
-
         int currentResolution = 0;
         resolutions = Screen.resolutions;
         List<string> options = new List<string>();
+        //Initiate possible resolutions for the dropdown
         for (int i = 0; i < resolutions.Length; i++)
         {
             options.Add(resolutions[i].width + " X "+resolutions[i].height+" @"+resolutions[i].refreshRate+"Hz");
@@ -65,38 +66,45 @@ public class SettingsMenuController : MonoBehaviour
         
     }
     public void setResolution(int id){
+        //Link with according field onChange
         InterScene.settings.resolutionId = id;
         Screen.SetResolution(resolutions[id].width,resolutions[id].height,Screen.fullScreenMode);
     }
     public void setFullScreen(bool b){
+        //Link with according field onChange
         InterScene.settings.fullscreen = b;
         Screen.fullScreen = b;
     }
     public void setTutorial(bool b){
+        //Link with according field onChange
         InterScene.settings.toggleTutorial = b;
         InterScene.toggleTutorial = b;
     }
     public void setMasterVolume(float v){
+        //Link with according field onChange
         float scaledV = volumePercentToDB(v);
         InterScene.settings.volume.master = scaledV;
         _mixer.SetFloat("VolMaster", scaledV);
     }
     public void setMusicVolume(float v){
+        //Link with according field onChange
         float scaledV = volumePercentToDB(v);
         InterScene.settings.volume.music = scaledV;
         _mixer.SetFloat("VolMusic", scaledV);
     }
     public void setSoundEffectVolume(float v){
+        //Link with according field onChange
         float scaledV = volumePercentToDB(v);
         InterScene.settings.volume.soundEffect = scaledV;
         _mixer.SetFloat("VolSoundEffect", scaledV);
     }
     float volumePercentToDB(float p){
-
+        //Return volume scaled from % to DB
         float db = 20*Mathf.Log10(p/100);
         return db;
     }
     float volumeDBToPercent(float db){
+        //Return volume scaled from DB to %
         float p = Mathf.Pow(10,db/20)*100;
         return p;
     }

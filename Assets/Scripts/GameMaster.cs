@@ -843,17 +843,6 @@ public class GameMaster : MonoBehaviour {
 		}
 		_player.setCanMove(true);
 		mainCam.orthographicSize = zoomedInCamSize;
-
-		/*
-		float camIncrement = (zoomedOutCamSize - zoomedInCamSize)*loopIncrement;
-		for (float i = 0; i < 1; i += loopIncrement)
-		{
-			//float newZoom = Mathf.SmoothDamp(mainCam.orthographicSize,zoomedCamSize,ref yVelocity,0.1f,100);
-			//mainCam.fieldOfView -= camIncrement;//perspective
-			mainCam.orthographicSize -= camIncrement; //orthographic
-			yield return new WaitForSeconds (0.01f);
-		}
-		 */
 	}
 
 	IEnumerator ZoomOut(){
@@ -866,18 +855,6 @@ public class GameMaster : MonoBehaviour {
 		}
 		_player.setCanMove(true);
 		mainCam.orthographicSize = zoomedOutCamSize;
-/*
-		//float camIncrement = (zoomedOutCamSize - zoomedInCamSize)*loopIncrement;
-		for (float i = 0; i < 1; i += loopIncrement)
-		{
-			//float newZoom = Mathf.SmoothDamp(mainCam.orthographicSize,zoomedCamSize,ref yVelocity,0.1f,100);
-			//mainCam.fieldOfView += camIncrement;
-			mainCam.orthographicSize += camIncrement; //orthographic
-			yield return new WaitForSeconds (0.01f);
-
-
-		}
- */
 		
 	}
 

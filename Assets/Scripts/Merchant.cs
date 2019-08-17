@@ -21,6 +21,7 @@ public class Merchant : MonoBehaviour
        
     }
     public void generateInventory(){
+        //Fetch 4 different items from interscene table and save them
         inventory = new Item[inventorySize];
         isInStock = new bool[inventorySize];
         for (int i = 0; i < isInStock.Length; i++)
@@ -40,6 +41,8 @@ public class Merchant : MonoBehaviour
         }
     }
     int fetchNewRandomItemId(List<int> idList){
+        //Fetch 1 random item from the loot table
+        //If it's already in the shop, reroll
         int tableId = Random.Range(0,maxLootTableId);
         int id = InterScene.jsonData.lootTables[tier].table[tableId];
         if(isRelic){

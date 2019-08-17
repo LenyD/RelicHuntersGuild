@@ -13,6 +13,7 @@ public class GlossaryMenuController : MonoBehaviour
     }
 
     public void closeGlossaryMenu(){
+        //Close glossary menu
         GameObject sound = Instantiate(click);
         SceneManager.MoveGameObjectToScene( sound,SceneManager.GetSceneAt(0));
         sound.GetComponent<SoundEffect>().playSound();
